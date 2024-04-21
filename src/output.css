@@ -752,6 +752,18 @@ html {
 
 .container {
   width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+@media (max-width: 640px) {
+  .container {
+    max-width: 640px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
 }
 
 @media (min-width: 640px) {
@@ -778,9 +790,9 @@ html {
   }
 }
 
-@media (min-width: 1536px) {
+@media (min-width: 1460px) {
   .container {
-    max-width: 1536px;
+    max-width: 1460px;
   }
 }
 
@@ -2384,6 +2396,11 @@ html {
   padding-bottom: 0.75rem;
 }
 
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -2927,7 +2944,7 @@ html {
 
 @media (min-width: 1024px) {
   .lg\:w-1\/2 {
-    width: 50%;
+    width: 70%;
   }
 
   .lg\:grid-cols-3 {
@@ -2951,7 +2968,7 @@ html {
 
 @media (min-width: 1280px) {
   .xl\:w-2\/5 {
-    width: 40%;
+    width: 60%;
   }
 
   .xl\:text-3xl {
