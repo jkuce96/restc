@@ -6,6 +6,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="./output.css">
     <script src="https://unpkg.com/htmx.org@1.9.12" integrity="sha384-ujb1lZYygJmzgSwoxRggbCHcjc0rB2XoQrxeTUQyRjrOnlCoYta87iKBWq3EsdM2" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.7/dist/countUp.umd.js"></script>
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
 
 
@@ -35,10 +37,10 @@
               <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Domů</a>
             </li>
             <li>
-              <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">O nás</a>
+              <a href="" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700" id="oNas">O nás</a>
             </li>
             <li>
-              <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Nabídka</a>
+              <a href="" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700" id="nabidka">Nabídka</a>
             </li>
             <li>
               <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Kde nás najdete?</a>
@@ -49,12 +51,39 @@
       </nav>
       
        
+      <section class="bg-slate-500 pt-9 min-h-screen md:w-full">
+        <header class="mt-11 items-center flex flex-col justify-center">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-center">Welcome to Rest Caaafé</h1>
+          <p class="text-lg md:text-xl lg:text-2xl xl:text-3xl text-center mt-4 px-4 md:px-0 lg:w-1/2 xl:w-2/5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed euismod, nunc eget aliquet lacinia, mauris nunc tincidunt nunc, id tincidunt urna ligula id nunc. Sed euismod, nunc eget aliquet lacinia, mauris nunc tincidunt nunc, id tincidunt urna ligula id nunc.</p>
+        </header>
+      
+        <!-- Info Cards -->
+        <div class="flex flex-col md:flex-row justify-center mt-8 md:mt-16 space-y-6 md:space-y-0 md:space-x-6">
+          <!-- First Info Card -->
+          <div class="max-w-sm rounded-md overflow-hidden shadow-lg bg-white">
+            <div class="px-6 py-4">
+              <div class="font-bold text-xl mb-2">Výběrová káva</div>
+              <p class="text-gray-700 text-base">We pride ourselves on serving the finest specialty coffee sourced from around the world. Each cup is meticulously brewed to perfection by our skilled baristas.</p>
+            </div>
+          </div>
+      
+          <!-- Second Info Card -->
+          <div class="max-w-sm rounded-md overflow-hidden shadow-lg bg-white">
+            <div class="px-6 py-4">
+              <div class="font-bold text-xl mb-2">Příjemná atmosféra</div>
+              <p class="text-gray-700 text-base">Relax and unwind in our cozy café atmosphere. Whether you're catching up with friends or enjoying some quiet time alone, we provide the perfect ambiance for every occasion.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      
 
+<div class="max-w-screen-xl mx-auto px-4 my-10 justify-center items-center">
 
-
-<div class="max-w-screen-xl mx-auto px-4 my-10">
+  
    
-    <section class="flex flex-col md:flex-row items-center justify-center py-10">
+    <section class="flex flex-col md:flex-row items-center justify-center py-3 my-0">
         <div class="md:w-1/2">
             <img src="https://demo.hasthemes.com/coffee-hutt/img/welcome/1.jpg" alt="Website Image" class="w-full">
         </div>
@@ -64,212 +93,237 @@
             <a href="#" class="text-blue-500 hover:underline">Learn More</a>
         </div>
     </section>
-    <div class="menu">
 
-
-   <div class="menu">
-    <div class="max-w-4xl mx-auto py-8">
+    <!-- KDO JSME? -->
+    <section class="flex flex-col md:flex-col py-3 my-0" id="kdoJsmeSection">
+      <div class="max-w-4xl mx-auto py-8">
         <div class="text-center">
-            <h1 class="text-4xl font-bold text-gray-800">Horké nápoje</h1>
+            <h1 class="text-4xl font-bold text-gray-800">Kdo jsme?</h1>
             <div class="h-px bg-gray-300 my-4"></div>
         </div>
     </div>
-    
-<section class="flex justify-center py-10">
-    <div class="w-1/3 mx-2">
-        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-            <img src="card1.jpg" alt="Card Image" class="w-full">
-            <div class="p-4">
-                <h3 class="text-xl font-bold mb-2">Card 1</h3>
-                <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.</p>
-            </div>
-        </div>
+    <div class="max-w-4xl mx-auto py-3">
+    <p>ahojjahojjahojjahojjahojjahojjahojjahojjahojjahojjahojjahojjahojjahojjahojjahojjahojj</p>
     </div>
-    <div class="w-1/3 mx-2">
-        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-            <img src="card2.jpg" alt="Card Image" class="w-full">
-            <div class="p-4">
-                <h3 class="text-xl font-bold mb-2">Card 2</h3>
-                <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.</p>
-            </div>
-        </div>
-    </div>
-    <div class="w-1/3 mx-2">
-        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-            <img src="card3.jpg" alt="Card Image" class="w-full">
-            <div class="p-4">
-                <h3 class="text-xl font-bold mb-2">Card 3</h3>
-                <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.</p>
-            </div>
-        </div>
-    </div>
-    <div class="w-1/3 mx-2">
-        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-            <img src="card3.jpg" alt="Card Image" class="w-full">
-            <div class="p-4">
-                <h3 class="text-xl font-bold mb-2">Card 3</h3>
-                <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.</p>
-            </div>
-        </div>
-    </div>
-    <div class="w-1/3 mx-2">
-        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-            <img src="card3.jpg" alt="Card Image" class="w-full">
-            <div class="p-4">
-                <h3 class="text-xl font-bold mb-2">Card 3</h3>
-                <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.</p>
-            </div>
-        </div>
-    </div>
-</section>
+  </section>
 
-<div class="flex justify-center mb-8">
-    <nav aria-label="Page navigation example" class="items-center">
-      <ul class="inline-flex -space-x-px text-sm items-center">
-        <li>
-          <a href="#" class="flex items-center justify-center px-3 h-8 ms-0 leading-tight text-gray-500 bg-white border border-e-0 border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
-        </li>
-        <li>
-          <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
-        </li>
-        <li>
-          <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
-        </li>
-        <li>
-          <a href="#" aria-current="page" class="flex items-center justify-center px-3 h-8 text-blue-600 border border-gray-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</a>
-        </li>
-        <li>
-          <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">4</a>
-        </li>
-        <li>
-          <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</a>
-        </li>
-        <li>
-          <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
 
-  <div class="max-w-4xl mx-auto py-8">
-    <div class="text-center">
-        <h1 class="text-4xl font-bold text-gray-800">Horké nápoje</h1>
-        <div class="h-px bg-gray-300 my-4"></div>
-    </div>
-</div>
-
-<section class="flex justify-center py-10">
-<div class="w-1/3 mx-2">
-    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-        <img src="card1.jpg" alt="Card Image" class="w-full">
-        <div class="p-4">
-            <h3 class="text-xl font-bold mb-2">Card 1</h3>
-            <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.</p>
-        </div>
-    </div>
-</div>
-<div class="w-1/3 mx-2">
-    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-        <img src="card2.jpg" alt="Card Image" class="w-full">
-        <div class="p-4">
-            <h3 class="text-xl font-bold mb-2">Card 2</h3>
-            <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.</p>
-        </div>
-    </div>
-</div>
-<div class="w-1/3 mx-2">
-    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-        <img src="card3.jpg" alt="Card Image" class="w-full">
-        <div class="p-4">
-            <h3 class="text-xl font-bold mb-2">Card 3</h3>
-            <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.</p>
-        </div>
-    </div>
-</div>
-<div class="w-1/3 mx-2">
-    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-        <img src="card3.jpg" alt="Card Image" class="w-full">
-        <div class="p-4">
-            <h3 class="text-xl font-bold mb-2">Card 3</h3>
-            <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.</p>
-        </div>
-    </div>
-</div>
-<div class="w-1/3 mx-2">
-    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-        <img src="card3.jpg" alt="Card Image" class="w-full">
-        <div class="p-4">
-            <h3 class="text-xl font-bold mb-2">Card 3</h3>
-            <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.</p>
-        </div>
-    </div>
-</div>
-</section>
-
-<div class="flex justify-center mb-8">
-<nav aria-label="Page navigation example" class="items-center">
-  <ul class="inline-flex -space-x-px text-sm items-center">
-    <li>
-      <a href="#" class="flex items-center justify-center px-3 h-8 ms-0 leading-tight text-gray-500 bg-white border border-e-0 border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
-    </li>
-    <li>
-      <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
-    </li>
-    <li>
-      <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
-    </li>
-    <li>
-      <a href="#" aria-current="page" class="flex items-center justify-center px-3 h-8 text-blue-600 border border-gray-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</a>
-    </li>
-    <li>
-      <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">4</a>
-    </li>
-    <li>
-      <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</a>
-    </li>
-    <li>
-      <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
-    </li>
-  </ul>
-</nav>
-</div>
-  
 
     </div>
 
     
 
 
+    <div class="menu flex items-center">
+
+<section class="items-center flex flex-col" id="nabidka-menu">
 
   
 
+<div class="inline-flex rounded-md shadow-sm" role="group">
+  <button id="teple-napoje-button" type="button" class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-s-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white">
+    Teplé nápoje
+  </button>
+  <button id="studene-napoje-button" type="button" class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white">
+    Studené nápoje
+  </button>
+  <button type="button" class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-e-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white">
+    Bronze 4
+  </button>
+</div>
 
-<div class="carousel rounded-box">
-    <div class="carousel-item">
-      <img src="https://daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg" alt="Burger" />
-    </div> 
-    <div class="carousel-item">
-      <img src="https://daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg" alt="Burger" />
-    </div> 
-    <div class="carousel-item">
-      <img src="https://daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.jpg" alt="Burger" />
-    </div> 
-    <div class="carousel-item">
-      <img src="https://daisyui.com/images/stock/photo-1494253109108-2e30c049369b.jpg" alt="Burger" />
-    </div> 
-    <div class="carousel-item">
-      <img src="https://daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.jpg" alt="Burger" />
-    </div> 
-    <div class="carousel-item">
-      <img src="https://daisyui.com/images/stock/photo-1559181567-c3190ca9959b.jpg" alt="Burger" />
-    </div> 
-    <div class="carousel-item">
-      <img src="https://daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.jpg" alt="Burger" />
+
+
+
+  <div class="teple-napoje" id="teple-napoje">
+  <div class="bg-white py-8">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-4 text-center">Teplé nápoje</h2>
+  
+      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <!-- Drink Item 1 -->
+        <div class="bg-white rounded-lg shadow-lg border border-gray-200 p-6 transition-transform hover:-translate-y-1 hover:shadow-xl">
+          <h3 class="text-xl font-semibold mb-2">Latte</h3>
+          <p class="text-gray-700">Espresso combined with steamed milk and a light layer of foam.</p>
+          <p class="text-gray-700 mt-2">Price: $3.99</p>
+        </div>
+        
+        
+  
+        <!-- Drink Item 2 -->
+        <div class="bg-white rounded-lg shadow-lg border border-gray-200 p-6 transition-transform hover:-translate-y-1 hover:shadow-xl">
+          <h3 class="text-xl font-semibold mb-2">Cappuccino</h3>
+          <p class="text-gray-700">Equal parts espresso, steamed milk, and foam, creating a creamy and bold coffee.</p>
+          <p class="text-gray-700 mt-2">Price: $4.25</p>
+        </div>
+  
+        <!-- Drink Item 3 -->
+        <div class="bg-white rounded-lg shadow-lg border border-gray-200 p-6 transition-transform hover:-translate-y-1 hover:shadow-xl">
+          <h3 class="text-xl font-semibold mb-2">Iced Coffee</h3>
+          <p class="text-gray-700">Chilled brewed coffee served over ice.</p>
+          <p class="text-gray-700 mt-2">Price: $3.49</p>
+        </div>
+  
+        <!-- Drink Item 4 -->
+        <div class="bg-white rounded-lg shadow-lg border border-gray-200 p-6 transition-transform hover:-translate-y-1 hover:shadow-xl">
+          <h3 class="text-xl font-semibold mb-2">Mocha</h3>
+          <p class="text-gray-700">Espresso combined with hot milk and chocolate, topped with whipped cream.</p>
+          <p class="text-gray-700 mt-2">Price: $4.50</p>
+        </div>
+  
+        <!-- Drink Item 5 -->
+        <div class="bg-white rounded-lg shadow-lg border border-gray-200 p-6 transition-transform hover:-translate-y-1 hover:shadow-xl">
+          <h3 class="text-xl font-semibold mb-2">Macchiato</h3>
+          <p class="text-gray-700">A shot of espresso with a dollop of steamed milk and foam.</p>
+          <p class="text-gray-700 mt-2">Price: $3.75</p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg border border-gray-200 p-6 transition-transform hover:-translate-y-1 hover:shadow-xl">
+          <h3 class="text-xl font-semibold mb-2">Macchiato</h3>
+          <p class="text-gray-700">A shot of espresso with a dollop of steamed milk and foam.</p>
+          <p class="text-gray-700 mt-2">Price: $3.75</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg border border-gray-200 p-6 transition-transform hover:-translate-y-1 hover:shadow-xl">
+          <h3 class="text-xl font-semibold mb-2">Mocha</h3>
+          <p class="text-gray-700">Espresso combined with hot milk and chocolate, topped with whipped cream.</p>
+          <p class="text-gray-700 mt-2">Price: $4.50</p>
+        </div>
+  
+        <!-- Drink Item 5 -->
+        <div class="bg-white rounded-lg shadow-lg border border-gray-200 p-6 transition-transform hover:-translate-y-1 hover:shadow-xl">
+          <h3 class="text-xl font-semibold mb-2">Macchiato</h3>
+          <p class="text-gray-700">A shot of espresso with a dollop of steamed milk and foam.</p>
+          <p class="text-gray-700 mt-2">Price: $3.75</p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg border border-gray-200 p-6 transition-transform hover:-translate-y-1 hover:shadow-xl">
+          <h3 class="text-xl font-semibold mb-2">Macchiato</h3>
+          <p class="text-gray-700">A shot of espresso with a dollop of steamed milk and foam.</p>
+          <p class="text-gray-700 mt-2">Price: $3.75</p>
+        </div>
+      </div>
     </div>
   </div>
+  
+</div>
+
+<div class="teple-napoje hidden" id="studene-napoje">
+  <div class="bg-white py-8">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-4 text-center">Studené nápoje</h2>
+  
+      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <!-- Drink Item 1 -->
+        <div class="bg-white rounded-lg shadow-lg border border-gray-200 p-6 transition-transform hover:-translate-y-1 hover:shadow-xl">
+          <h3 class="text-xl font-semibold mb-2">Coca Cola</h3>
+          <p class="text-gray-700">Coca Cola lahodný n ápoj.</p>
+          <p class="text-gray-700 mt-2">Price: $3.99</p>
+        </div>
+  
+        <!-- Drink Item 2 -->
+        <div class="bg-white rounded-lg shadow-lg border border-gray-200 p-6 transition-transform hover:-translate-y-1 hover:shadow-xl">
+          <h3 class="text-xl font-semibold mb-2">Fanta</h3>
+          <p class="text-gray-700">Michal Pham je Platinum1 max.</p>
+          <p class="text-gray-700 mt-2">Price: $4.25</p>
+        </div>
+  
+        <!-- Drink Item 3 -->
+        <div class="bg-white rounded-lg shadow-lg border border-gray-200 p-6 transition-transform hover:-translate-y-1 hover:shadow-xl">
+          <h3 class="text-xl font-semibold mb-2">Iced Coffee</h3>
+          <p class="text-gray-700">Chilled brewed coffee served over ice.</p>
+          <p class="text-gray-700 mt-2">Price: $3.49</p>
+        </div>
+  
+        <!-- Drink Item 4 -->
+        <div class="bg-white rounded-lg shadow-lg border border-gray-200 p-6 transition-transform hover:-translate-y-1 hover:shadow-xl">
+          <h3 class="text-xl font-semibold mb-2">Mocha</h3>
+          <p class="text-gray-700">Espresso combined with hot milk and chocolate, topped with whipped cream.</p>
+          <p class="text-gray-700 mt-2">Price: $4.50</p>
+        </div>
+  
+        <!-- Drink Item 5 -->
+        <div class="bg-white rounded-lg shadow-lg border border-gray-200 p-6 transition-transform hover:-translate-y-1 hover:shadow-xl">
+          <h3 class="text-xl font-semibold mb-2">Macchiato</h3>
+          <p class="text-gray-700">A shot of espresso with a dollop of steamed milk and foam.</p>
+          <p class="text-gray-700 mt-2">Price: $3.75</p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg border border-gray-200 p-6 transition-transform hover:-translate-y-1 hover:shadow-xl">
+          <h3 class="text-xl font-semibold mb-2">Macchiato</h3>
+          <p class="text-gray-700">A shot of espresso with a dollop of steamed milk and foam.</p>
+          <p class="text-gray-700 mt-2">Price: $3.75</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg border border-gray-200 p-6 transition-transform hover:-translate-y-1 hover:shadow-xl">
+          <h3 class="text-xl font-semibold mb-2">Mocha</h3>
+          <p class="text-gray-700">Espresso combined with hot milk and chocolate, topped with whipped cream.</p>
+          <p class="text-gray-700 mt-2">Price: $4.50</p>
+        </div>
+  
+        <!-- Drink Item 5 -->
+        <div class="bg-white rounded-lg shadow-lg border border-gray-200 p-6 transition-transform hover:-translate-y-1 hover:shadow-xl">
+          <h3 class="text-xl font-semibold mb-2">Macchiato</h3>
+          <p class="text-gray-700">A shot of espresso with a dollop of steamed milk and foam.</p>
+          <p class="text-gray-700 mt-2">Price: $3.75</p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg border border-gray-200 p-6 transition-transform hover:-translate-y-1 hover:shadow-xl">
+          <h3 class="text-xl font-semibold mb-2">Macchiato</h3>
+          <p class="text-gray-700">A shot of espresso with a dollop of steamed milk and foam.</p>
+          <p class="text-gray-700 mt-2">Price: $3.75</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</section>
+
+
 
 
 </div> 
+
+
+<section class="bg-gray-100 py-16">
+  <div class="max-w-4xl mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-4 text-center">Naše hodnocení</h2>
+    <p class="text-lg text-gray-700 mb-8 text-center">Podívejte se, co o nás říkají naši zákazníci.</p>
+
+    <!-- Review Sources -->
+    <div class="flex flex-col md:flex-row justify-center mb-8">
+      <div class="bg-white rounded-lg shadow-md p-6 mb-4 md:mb-0 md:mr-4">
+        <h3 class="text-xl font-semibold mb-2">TripAdvisor Reviews</h3>
+        <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis nulla ac mi eleifend vehicula.</p>
+      </div>
+      <div class="bg-white rounded-lg shadow-md p-6 md:ml-4">
+        <h3 class="text-xl font-semibold mb-2">Google Reviews</h3>
+        <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis nulla ac mi eleifend vehicula.</p>
+      </div>
+    </div>
+
+    <!-- Review Stats -->
+    <div class="flex justify-center mb-8">
+      <div class="mr-8">
+        <h3 class="text-xl font-semibold mb-2">Average Rating</h3>
+        <p id="averageRating" class="text-3xl text-blue-500 font-bold">94</p>
+      </div>
+      <div class="mr-8">
+        <h3 class="text-xl font-semibold mb-2">Total Reviews</h3>
+        <p id="totalReviews" class="text-3xl text-blue-500 font-bold">0</p>
+      </div>
+      <div class="mr-8">
+        <h3 class="text-xl font-semibold mb-2">Positive Reviews</h3>
+        <p id="positiveReviews" class="text-3xl text-green-500 font-bold">0</p>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-2">Negative Reviews</h3>
+        <p id="negativeReviews" class="text-3xl text-red-500 font-bold">0</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
 
 
@@ -297,5 +351,6 @@
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script src="script.js" type="module"></script>
 </body>
 </html>
