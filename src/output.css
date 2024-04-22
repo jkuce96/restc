@@ -752,35 +752,15 @@ html {
 
 .container {
   width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 1124px) {
   .container {
-    max-width: 640px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
-}
-
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
+    max-width: 1124px;
   }
 }
 
@@ -1230,6 +1210,10 @@ html {
 .my-10 {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
+}
+
+.-mt-3 {
+  margin-top: -0.75rem;
 }
 
 .mb-2 {
@@ -1899,6 +1883,10 @@ html {
 }
 
 @media (min-width: 768px) {
+  .md\:right-8 {
+    right: 2rem;
+  }
+
   .md\:order-1 {
     order: 1;
   }
@@ -2056,6 +2044,10 @@ html {
 }
 
 @media (min-width: 1024px) {
+  .lg\:right-28 {
+    right: 7rem;
+  }
+
   .lg\:mb-0 {
     margin-bottom: 0px;
   }
