@@ -77,20 +77,30 @@ function aboutZoom() {
 }
 
 function napojeSwitch() {
-    const studeneButton = document.getElementById("teple-napoje-button");
-    const tepleButton = document.getElementById("studene-napoje-button");
+    const studeneButton = document.getElementById("studene-napoje-button");
+    const tepleButton = document.getElementById("teple-napoje-button");
+    const zakuskyButton = document.getElementById("zakusky-button");
 
     const studeneMenu = document.getElementById("studene-napoje");
     const tepleMenu = document.getElementById("teple-napoje");
+    const zakuskyMenu = document.getElementById("zakusky");
 
     studeneButton.addEventListener("click", function() {
         studeneMenu.style.display = "block";
         tepleMenu.style.display = "none";
+        zakuskyMenu.style.display = "none";
     });
 
     tepleButton.addEventListener("click", function() {
         studeneMenu.style.display = "none";
+        zakuskyMenu.style.display = "none";
         tepleMenu.style.display = "block";
+    });
+
+    zakuskyButton.addEventListener("click", function() {
+        zakuskyMenu.style.display = "block";
+        studeneMenu.style.display = "none";
+        tepleMenu.style.display = "none";
     });
 }
 
@@ -116,6 +126,17 @@ window.addEventListener('scroll', () => {
   } else {
     scrollTopBtn.classList.add('hidden');
   }
+});
+
+const toggleButton = document.getElementById('toggleCard');
+const contactCard = document.getElementById('contactCard');
+
+toggleButton.addEventListener('click', function() {
+    if (contactCard.classList.contains('hidden')) {
+        contactCard.classList.remove('hidden');
+    } else {
+        contactCard.classList.add('hidden');
+    }
 });
 
 // Event listener to scroll to the top when the button is clicked
