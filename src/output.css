@@ -758,9 +758,9 @@ html {
   padding-left: 1rem;
 }
 
-@media (min-width: 1124px) {
+@media (min-width: 1280px) {
   .container {
-    max-width: 1124px;
+    max-width: 1280px;
   }
 }
 
@@ -1503,7 +1503,7 @@ html {
 
 .bg-purple-200 {
   --tw-bg-opacity: 1;
-  background-color: rgb(233 213 255 / var(--tw-bg-opacity));
+  background: linear-gradient(to bottom right, #662929, #a82121);
 }
 
 .bg-red-900 {
@@ -1513,7 +1513,7 @@ html {
 
 .bg-slate-500 {
   --tw-bg-opacity: 1;
-  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
+  background: linear-gradient(to bottom right, #000000, #656565);
 }
 
 .bg-white {
@@ -1848,6 +1848,30 @@ html {
   --tw-ring-color: rgb(229 231 235 / var(--tw-ring-opacity));
 }
 
+@media (max-width: 640px) {
+  .sm\:pt-20 {
+    padding-top: 5rem;
+  }
+
+  .sm\:text-base {
+      font-size: 1rem;
+  }
+
+  .sm\:gap-4 {
+    gap: 1rem;
+  }
+
+  .sm\:px-2 {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+
+  .sm\:line-height {
+    line-height: inherit;
+  }
+
+}
+
 @media (min-width: 640px) {
   .sm\:col-span-2 {
     grid-column: span 2 / span 2;
@@ -2111,7 +2135,7 @@ html {
 
 @media (min-width: 1280px) {
   .xl\:w-2\/5 {
-    width: 40%;
+    width: 100%;
   }
 
   .xl\:text-3xl {
