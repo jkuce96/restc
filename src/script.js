@@ -74,6 +74,26 @@ function aboutZoom() {
             behavior: 'smooth'
         });
     });
+    document.getElementById("domu-button").addEventListener("click", function(e) {
+        e.preventDefault();
+        console.log("domu");
+        let target = document.querySelector("nav");
+        let targetPosition = target;
+        window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+        });
+    });
+    document.getElementById("kde-najit").addEventListener("click", function(e) {
+        e.preventDefault();
+        console.log("kde-najit");
+        let target = document.getElementById("hodnoceni-reviews");
+        let targetPosition = target.offsetTop - 80;
+        window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+        });
+    });
 }
 
 function napojeSwitch() {
@@ -128,16 +148,7 @@ window.addEventListener('scroll', () => {
   }
 });
 
-const toggleButton = document.getElementById('toggleCard');
-const contactCard = document.getElementById('contactCard');
 
-toggleButton.addEventListener('click', function() {
-    if (contactCard.classList.contains('hidden')) {
-        contactCard.classList.remove('hidden');
-    } else {
-        contactCard.classList.add('hidden');
-    }
-});
 
 // Event listener to scroll to the top when the button is clicked
 scrollTopBtn.addEventListener('click', scrollToTop);
