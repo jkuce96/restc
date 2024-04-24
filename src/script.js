@@ -7,6 +7,31 @@ function easeOutExpo(t) {
   }
 }
 
+//burger
+const navbarSticky = document.getElementById("navbar-sticky");
+const button = document.querySelector("[data-collapse-toggle='navbar-sticky']");
+
+function hideStickyNav() {
+    navbarSticky.classList.add("hidden");
+}
+
+function toggleStickyNav() {
+    navbarSticky.classList.toggle("hidden");
+}
+
+document.addEventListener("click", function(event) {
+    if (event.target !== button && !navbarSticky.contains(event.target)) {
+        hideStickyNav();
+    }
+});
+
+button.addEventListener("click", function(event) {
+    event.stopPropagation();
+    
+    toggleStickyNav();
+});
+
+
 // Function to animate the counter
 function animateCounter(target, targetValue) {
   let current = 0;
@@ -87,8 +112,8 @@ function aboutZoom() {
     document.getElementById("kde-najit").addEventListener("click", function(e) {
         e.preventDefault();
         console.log("kde-najit");
-        let target = document.getElementById("hodnoceni-reviews");
-        let targetPosition = target.offsetTop - 80;
+        let target = document.getElementById("location");
+        let targetPosition = target.offsetTop - 45;
         window.scrollTo({
             top: targetPosition,
             behavior: 'smooth'
