@@ -11,7 +11,14 @@ module.exports = {
         "bookmark-blue": "#242A45",
         "bookmark-grey": "#9194A2",
         "bookmark-white": "#f7f7f7",
-      }
+        "custom-purple": "#E9D5FF",
+      },
+      linearGradientColors: {
+        "custom-gradient": ["#000000", "#656565"]
+      },
+      backgroundImage: theme => ({
+        "custom-gradient": "linear-gradient(to bottom right, #000000, #656565"
+      }),
     },
     fontFamily: {
       Poppins: ["Poppins, sans-serif"]
