@@ -758,9 +758,9 @@ html {
   padding-left: 1rem;
 }
 
-@media (min-width: 1124px) {
+@media (min-width: 1280px) {
   .container {
-    max-width: 1124px;
+    max-width: 1280px;
   }
 }
 
@@ -1244,6 +1244,10 @@ html {
   margin-top: 1rem;
 }
 
+.mt-8 {
+  margin-top: 2rem;
+}
+
 .block {
   display: block;
 }
@@ -1360,6 +1364,10 @@ html {
   gap: 1.5rem;
 }
 
+.gap-3 {
+  gap: 0.75rem;
+}
+
 .space-x-3 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.75rem * var(--tw-space-x-reverse));
@@ -1436,12 +1444,12 @@ html {
 
 .bg-purple-200 {
   --tw-bg-opacity: 1;
-  background-color: rgb(233 213 255 / var(--tw-bg-opacity));
+  background: linear-gradient(to bottom right, #662929, #a82121);
 }
 
 .bg-slate-500 {
   --tw-bg-opacity: 1;
-  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
+  background: linear-gradient(to bottom right, #000000, #656565);
 }
 
 .bg-white {
@@ -1474,6 +1482,11 @@ html {
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .px-8 {
@@ -1584,6 +1597,10 @@ html {
 
 .font-semibold {
   font-weight: 600;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 .italic {
@@ -1728,7 +1745,35 @@ html {
   --tw-ring-color: rgb(229 231 235 / var(--tw-ring-opacity));
 }
 
+@media (max-width: 640px) {
+  .sm\:pt-20 {
+    padding-top: 5rem;
+  }
+
+  .sm\:text-base {
+      font-size: 1rem;
+  }
+
+  .sm\:gap-4 {
+    gap: 1rem;
+  }
+
+  .sm\:px-2 {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+
+  .sm\:line-height {
+    line-height: inherit;
+  }
+
+}
+
 @media (min-width: 640px) {
+  .sm\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+
   .sm\:col-span-1 {
     grid-column: span 1 / span 1;
   }
@@ -1749,10 +1794,6 @@ html {
     flex-direction: row;
   }
 
-  .sm\:gap-4 {
-    gap: 1rem;
-  }
-
   .sm\:space-x-5 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
     margin-right: calc(1.25rem * var(--tw-space-x-reverse));
@@ -1765,26 +1806,16 @@ html {
     margin-bottom: calc(0px * var(--tw-space-y-reverse));
   }
 
-  .sm\:px-2 {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-
-  .sm\:pt-20 {
-    padding-top: 5rem;
-  }
-
   .sm\:text-center {
     text-align: center;
-  }
-
-  .sm\:text-base {
-    font-size: 1rem;
-    line-height: 1.5rem;
   }
 }
 
 @media (min-width: 768px) {
+  .md\:right-8 {
+    right: 2rem;
+  }
+
   .md\:order-1 {
     order: 1;
   }
@@ -1960,7 +1991,7 @@ html {
 
 @media (min-width: 1280px) {
   .xl\:w-2\/5 {
-    width: 40%;
+    width: 100%;
   }
 
   .xl\:text-3xl {
