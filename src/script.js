@@ -80,8 +80,8 @@ function aboutZoom() {
     //o nás zoom
     document.getElementById("oNas").addEventListener("click", function(e) {
         e.preventDefault();
-        console.log("onas");
-        let target = document.getElementById("kdoJsmeSection");
+        console.log("oNas");
+        let target = document.getElementById("about-us");
         let targetPosition = target.offsetTop - 40;
         window.scrollTo({
             top: targetPosition,
@@ -121,33 +121,30 @@ function aboutZoom() {
     });
 }
 
-function napojeSwitch() {
-    const studeneButton = document.getElementById("studene-napoje-button");
-    const tepleButton = document.getElementById("teple-napoje-button");
-    const zakuskyButton = document.getElementById("zakusky-button");
+document.addEventListener('DOMContentLoaded', function() {
+    const buttons = document.querySelectorAll('button[data-content]');
+    const contents = document.querySelectorAll('.content');
 
-    const studeneMenu = document.getElementById("studene-napoje");
-    const tepleMenu = document.getElementById("teple-napoje");
-    const zakuskyMenu = document.getElementById("zakusky");
+    for (let i = 1; i < contents.length; i++) {
+        contents[i].style.display = 'none';
+    }
 
-    studeneButton.addEventListener("click", function() {
-        studeneMenu.style.display = "block";
-        tepleMenu.style.display = "none";
-        zakuskyMenu.style.display = "none";
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            const contentId = this.getAttribute('data-content');
+            const selectedContent = document.getElementById(contentId);
+
+            contents.forEach(content => {
+                content.style.display = 'none';
+            });
+
+            if (selectedContent) {
+                selectedContent.style.display = 'block';
+            }
+        });
     });
+});
 
-    tepleButton.addEventListener("click", function() {
-        studeneMenu.style.display = "none";
-        zakuskyMenu.style.display = "none";
-        tepleMenu.style.display = "block";
-    });
-
-    zakuskyButton.addEventListener("click", function() {
-        zakuskyMenu.style.display = "block";
-        studeneMenu.style.display = "none";
-        tepleMenu.style.display = "none";
-    });
-}
 
 // Get the scroll to top button element
 const scrollTopBtn = document.getElementById('scrollTopBtn');
@@ -179,9 +176,4 @@ window.addEventListener('scroll', () => {
 scrollTopBtn.addEventListener('click', scrollToTop);
 
 
-
 aboutZoom();
-napojeSwitch();
-
-aboutZoom();
-napojeSwitch();

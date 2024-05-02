@@ -1281,6 +1281,10 @@ html {
   display: grid;
 }
 
+.contents {
+  display: contents;
+}
+
 .hidden {
   display: none;
 }
@@ -1523,11 +1527,6 @@ html {
   padding-right: 1rem;
 }
 
-.px-8 {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
 .py-12 {
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -1562,10 +1561,6 @@ html {
   padding-bottom: 2.5rem;
 }
 
-.pb-4 {
-  padding-bottom: 1rem;
-}
-
 .pb-7 {
   padding-bottom: 1.75rem;
 }
@@ -1584,10 +1579,6 @@ html {
 
 .pt-9 {
   padding-top: 2.25rem;
-}
-
-.pt-3 {
-  padding-top: 0.75rem;
 }
 
 .text-center {
@@ -1849,10 +1840,6 @@ html {
 
   .sm\:pt-20 {
     padding-top: 5rem;
-  }
-
-  .sm\:pt-3 {
-    padding-top: 0.75rem;
   }
 
   .sm\:text-center {
