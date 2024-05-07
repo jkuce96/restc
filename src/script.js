@@ -1,4 +1,7 @@
+
+
 // Define the easing function with an extra easing effect towards the end
+
 function easeOutExpo(t) {
   if (t < 0.5) {
     return t === 0 ? 0 : Math.pow(2, 10 * (t - 1));
@@ -169,6 +172,8 @@ window.addEventListener('scroll', () => {
     scrollTopBtn.classList.add('hidden');
   }
 });
+
+//ig 
 
 
 
