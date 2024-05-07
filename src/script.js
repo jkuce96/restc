@@ -79,50 +79,65 @@ counters.forEach(counter => {
 
 
 
-function aboutZoom() {
-    //o nás zoom
-    document.getElementById("oNas").addEventListener("click", function(e) {
-        e.preventDefault();
-        console.log("oNas");
-        let target = document.getElementById("about-us");
-        let targetPosition = target.offsetTop - 40;
-        window.scrollTo({
-            top: targetPosition,
-            behavior: 'smooth'
-        });
-    });
 
-    document.getElementById("nabidka").addEventListener("click", function(e) {
-        e.preventDefault();
-        console.log("nabidka");
-        let target = document.getElementById("nabidka-menu");
-        let targetPosition = target.offsetTop - 80;
-        window.scrollTo({
-            top: targetPosition,
-            behavior: 'smooth'
-        });
-    });
-    document.getElementById("domu-button").addEventListener("click", function(e) {
-        e.preventDefault();
-        console.log("domu");
-        let target = document.querySelector("nav");
-        let targetPosition = target;
-        window.scrollTo({
-            top: targetPosition,
-            behavior: 'smooth'
-        });
-    });
-    document.getElementById("kde-najit").addEventListener("click", function(e) {
-        e.preventDefault();
-        console.log("kde-najit");
-        let target = document.getElementById("location");
-        let targetPosition = target.offsetTop - 45;
-        window.scrollTo({
-            top: targetPosition,
-            behavior: 'smooth'
-        });
-    });
+function aboutZoom() {
+  // button-list
+  const menuButtons = document.querySelectorAll("#list-items-burger li a");
+
+  // Scroll event listener to change color of navigation buttons
+  window.addEventListener("scroll", function() {
+      let currentScroll = window.scrollY;
+
+      // Iterate over each section and check if it's in view
+      document.querySelectorAll("section").forEach(section => {
+          let sectionTop = section.offsetTop;
+          let sectionBottom = section.offsetTop + section.offsetHeight;
+
+          if (currentScroll >= sectionTop && currentScroll < sectionBottom) {
+              // Find corresponding navigation button and update color
+              let targetId = section.id;
+              menuButtons.forEach(button => {
+                  if (button.getAttribute("href").substring(1) === targetId) {
+                      menuButtons.forEach(btn => {
+                          btn.classList.remove("text-blue-700");
+                          btn.classList.add("text-gray-900");
+                      });
+                      button.classList.remove("text-gray-900");
+                      button.classList.add("text-blue-700");
+                  }
+              });
+          }
+      });
+  });
+
+  // Click event listener for navigation buttons
+  menuButtons.forEach(button => {
+      button.addEventListener("click", function(e) {
+          e.preventDefault();
+
+          menuButtons.forEach(btn => {
+              btn.classList.remove("text-blue-700");
+              btn.classList.add("text-gray-900");
+          });
+
+          button.classList.remove("text-gray-900");
+          button.classList.add("text-blue-700");
+
+          let targetId = button.getAttribute("href").substring(1);
+          let target = document.getElementById(targetId);
+          let targetPosition = target.offsetTop - 40;
+          window.scrollTo({
+              top: targetPosition,
+              behavior: 'smooth'
+          });
+      });
+  });
 }
+
+// Call the aboutZoom function to initialize it
+aboutZoom();
+
+
 
 document.addEventListener('DOMContentLoaded', function() {
     const buttons = document.querySelectorAll('button[data-content]');
