@@ -81,21 +81,19 @@ counters.forEach(counter => {
 
 
 function aboutZoom() {
-  // button-list
+  // list tlačítek
   const menuButtons = document.querySelectorAll("#list-items-burger li a");
 
-  // Scroll event listener to change color of navigation buttons
   window.addEventListener("scroll", function() {
       let currentScroll = window.scrollY;
-
-      // Iterate over each section and check if it's in view
+    
       document.querySelectorAll("section").forEach(section => {
           let sectionTop = section.offsetTop;
           let sectionBottom = section.offsetTop + section.offsetHeight;
 
           if (currentScroll >= sectionTop && currentScroll < sectionBottom) {
-              // Find corresponding navigation button and update color
-              let targetId = section.id;
+
+            let targetId = section.id;
               menuButtons.forEach(button => {
                   if (button.getAttribute("href").substring(1) === targetId) {
                       menuButtons.forEach(btn => {
@@ -110,7 +108,6 @@ function aboutZoom() {
       });
   });
 
-  // Click event listener for navigation buttons
   menuButtons.forEach(button => {
       button.addEventListener("click", function(e) {
           e.preventDefault();
