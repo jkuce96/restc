@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Rest Café</title>
-	<link rel="stylesheet" href="./output.css">
-	<script src="https://unpkg.com/htmx.org@1.9.12"
-			integrity="sha384-ujb1lZYygJmzgSwoxRggbCHcjc0rB2XoQrxeTUQyRjrOnlCoYta87iKBWq3EsdM2"
-			crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.7/dist/countUp.umd.js"></script>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Café</title>
+    <link rel="stylesheet" href="./output.css">
+    <script src="https://unpkg.com/htmx.org@1.9.12"
+            integrity="sha384-ujb1lZYygJmzgSwoxRggbCHcjc0rB2XoQrxeTUQyRjrOnlCoYta87iKBWq3EsdM2"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.7/dist/countUp.umd.js"></script>
 
-	<link href="output.css" rel="stylesheet" />
+    <link href="output.css" rel="stylesheet" />
 
 
 </head>
@@ -19,452 +19,548 @@
 
 
 <nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
-	<div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-		<div>
-			<a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-				<img src="./restlogo.png" class="h-8" alt="restcafe logo">
-				
-			</a>
-		</div>
-		<div class="flex md:order-2 md:hidden space-x-3 md:space-x-0 rtl:space-x-reverse">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <div>
+            <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="./restlogo.png" class="h-8" alt="restcafe logo">
 
-			<button data-collapse-toggle="navbar-sticky" type="button"
-					class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-					aria-controls="navbar-sticky" aria-expanded="false">
-				<span class="sr-only">Open main menu</span>
-				<svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-					 viewBox="0 0 17 14">
-					<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-						  d="M1 1h15M1 7h15M1 13h15" />
-				</svg>
-			</button>
-		</div>
-		<div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-			<ul id="list-items-burger" class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-				<li>
-					<a href="#navb" class="block py-2 px-3 text-black bg-blue-700 rounded md:bg-transparent hover:text-blue-700 md:p-0 menu-button" aria-current="page" id="domu-button">Domů</a>
-				</li>
-				<li>
-					<a href="#about-us" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 menu-button" id="oNas">O nás</a>
-				</li>
-				<li>
-					<a href="#nabidka-menu" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 menu-button" id="nabidka">Nabídka</a>
-				</li>
-				<li>
-					<a href="#location" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 menu-button" id="kde-najit">Kde nás najdete?</a>
-				</li>
-			</ul>
-			
+            </a>
+        </div>
+        <div class="flex md:order-2 md:hidden space-x-3 md:space-x-0 rtl:space-x-reverse">
+
+            <button data-collapse-toggle="navbar-sticky" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="navbar-sticky" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                     viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+        </div>
+        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+            <ul id="list-items-burger"
+                class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                <li>
+                    <a href="#navb"
+                       class="block py-2 px-3 text-black bg-blue-700 rounded md:bg-transparent hover:text-blue-700 md:p-0 menu-button"
+                       aria-current="page" id="domu-button">Domů</a>
+                </li>
+                <li>
+                    <a href="#about-us"
+                       class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 menu-button"
+                       id="oNas">O nás</a>
+                </li>
+                <li>
+                    <a href="#nabidka-menu"
+                       class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 menu-button"
+                       id="nabidka">Nabídka</a>
+                </li>
+                <li>
+                    <a href="#location"
+                       class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 menu-button"
+                       id="kde-najit">Kde nás najdete?</a>
+                </li>
+            </ul>
 
 
-		</div>
+        </div>
 
-	</div>
+    </div>
 
 </nav>
 
 
-<section class="bg-cover bg-center flex flex-col justify-center pt-9 min-h-screen md:w-full relative" id="navb" style="background-image: url(./restpobocka.jpg)">
+<section class="bg-cover bg-center flex flex-col justify-center pt-9 min-h-screen md:w-full relative" id="navb"
+         style="background-image: url(./restpobocka.jpg)">
     <div class="absolute inset-0 bg-black opacity-50"></div>
     <header class="container relative items-center flex flex-col justify-center py-12 sm:pt-20">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-center text-white z-10">Welcome to Rest Caaafé</h1>
-        <p class="text-lg md:text-xl lg:text-2xl xl:text-3xl text-center mt-4 px-4 md:px-0 lg:w-1/2 xl:w-2/5 text-white z-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed euismod, nunc eget aliquet lacinia, mauris nunc tincidunt nunc, id tincidunt urna ligula id nunc. Sed euismod, nunc eget aliquet lacinia, mauris nunc tincidunt nunc, id tincidunt urna ligula id nunc.</p>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-center text-white z-10">Welcome to Rest
+            Caaafé</h1>
+        <p class="text-lg md:text-xl lg:text-2xl xl:text-3xl text-center mt-4 px-4 md:px-0 lg:w-1/2 xl:w-2/5 text-white z-10">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed euismod, nunc eget aliquet
+            lacinia, mauris nunc tincidunt nunc, id tincidunt urna ligula id nunc. Sed euismod, nunc eget aliquet
+            lacinia, mauris nunc tincidunt nunc, id tincidunt urna ligula id nunc.</p>
     </header>
 </section>
 
 
-
 <div class="max-w-screen-xl mx-auto px-4 mt-10 md:mt-14 lg:mt-20 justify-center items-center">
 
-	<!-- KDO JSME? -->
-	<section class="py-2" id="about-us">
-		<!-- HEADING -->
-		<div class="sm:w-3/4 lg:w-5/12 mx-auto px-2">
-			<h1 class="text-3xl text-center text-bookmark-blue">Featurky</h1>
-			<p class="text-center text-bookmark-grey mt-4">
-				Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque tincidunt scelerisque libero. Etiam
-				bibendum elit eget erat. Nunc dapibus tortor vel mi dapibus sollicitudin.
-			</p>
-		</div>
-		<!--FEATURES - feature n1-->
-		<div class="relative mt-20 lg:mt-24">
-			<div class="container flex flex-col lg:flex-row items-center justify-center gap-x-24">
-				<!-- obrázek-->
-				<div class="flex flex-1 justify-center z-10 mb-10 lg:mb-0">
-					<img class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full" src="./coffee.jpg" alt="">
-				</div>
-				<!-- CONTENT -->
-				<div class="flex flex-1 flex-col items-center">
-					<h1 class="text-3xl text-bookmark-blue">Káva 1</h1>
-					<p class="text-bookmark-grey my-4 text-center sm:w-3/4 lg:w-full">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos dolorem earum quidem dolor
-						necessitatibus modi ab sed illum? Beatae iste doloremque illo.
-					</p>
-				</div>
-			</div>
+    <!-- KDO JSME? -->
+    <section class="py-2" id="about-us">
+        <!-- HEADING -->
+        <div class="sm:w-3/4 lg:w-5/12 mx-auto px-2">
+            <h1 class="text-3xl text-center text-bookmark-blue">Featurky</h1>
+            <p class="text-center text-bookmark-grey mt-4">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque tincidunt scelerisque libero. Etiam
+                bibendum elit eget erat. Nunc dapibus tortor vel mi dapibus sollicitudin.
+            </p>
+        </div>
+        <!--FEATURES - feature n1-->
+        <div class="relative mt-20 lg:mt-24">
+            <div class="container flex flex-col lg:flex-row items-center justify-center gap-x-24">
+                <!-- obrázek-->
+                <div class="flex flex-1 justify-center z-10 mb-10 lg:mb-0">
+                    <img class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full" src="./coffee.jpg" alt="">
+                </div>
+                <!-- CONTENT -->
+                <div class="flex flex-1 flex-col items-center">
+                    <h1 class="text-3xl text-bookmark-blue">Káva 1</h1>
+                    <p class="text-bookmark-grey my-4 text-center sm:w-3/4 lg:w-full">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos dolorem earum quidem dolor
+                        necessitatibus modi ab sed illum? Beatae iste doloremque illo.
+                    </p>
+                </div>
+            </div>
 
-		</div>
-		<!--FEATURES - feature n2-->
-		<div class="relative mt-20 lg:mt-24">
-			<div class="container flex flex-col lg:flex-row-reverse items-center justify-center gap-x-24">
-				<!-- obrázek-->
-				<div class="flex flex-1 justify-center z-10 mb-10 lg:mb-0">
-					<img class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full" src="./coffee.jpg" alt="">
-				</div>
-				<!-- CONTENT -->
-				<div class="flex flex-1 flex-col items-center">
-					<h1 class="text-3xl text-bookmark-blue">Kávička</h1>
-					<p class="text-bookmark-grey my-4 text-center sm:text-center sm:w-3/4 lg:w-full">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis voluptates sit eum, distinctio
-						illo dicta beatae dolore voluptatum accusamus.
-					</p>
-				</div>
-			</div>
+        </div>
+        <!--FEATURES - feature n2-->
+        <div class="relative mt-20 lg:mt-24">
+            <div class="container flex flex-col lg:flex-row-reverse items-center justify-center gap-x-24">
+                <!-- obrázek-->
+                <div class="flex flex-1 justify-center z-10 mb-10 lg:mb-0">
+                    <img class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full" src="./coffee.jpg" alt="">
+                </div>
+                <!-- CONTENT -->
+                <div class="flex flex-1 flex-col items-center">
+                    <h1 class="text-3xl text-bookmark-blue">Kávička</h1>
+                    <p class="text-bookmark-grey my-4 text-center sm:text-center sm:w-3/4 lg:w-full">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis voluptates sit eum, distinctio
+                        illo dicta beatae dolore voluptatum accusamus.
+                    </p>
+                </div>
+            </div>
 
-		</div>
-		<!--FEATURES - feature n3-->
-		<div class="relative mt-20 lg:mt-24">
-			<div class="container flex flex-col lg:flex-row items-center justify-center gap-x-24">
-				<!-- obrázek-->
-				<div class="flex flex-1 justify-center z-10 mb-10 lg:mb-0">
-					<img class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full" src="./coffee.jpg" alt="">
-				</div>
-				<!-- CONTENT -->
-				<div class="flex flex-1 flex-col items-center">
-					<h1 class="text-3xl text-bookmark-blue">Káva 1</h1>
-					<p class="text-bookmark-grey my-4 text-center sm:w-3/4 lg:w-full">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos dolorem earum quidem dolor
-						necessitatibus modi ab sed illum? Beatae iste doloremque illo.
-					</p>
-				</div>
-			</div>
+        </div>
+        <!--FEATURES - feature n3-->
+        <div class="relative mt-20 lg:mt-24">
+            <div class="container flex flex-col lg:flex-row items-center justify-center gap-x-24">
+                <!-- obrázek-->
+                <div class="flex flex-1 justify-center z-10 mb-10 lg:mb-0">
+                    <img class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full" src="./coffee.jpg" alt="">
+                </div>
+                <!-- CONTENT -->
+                <div class="flex flex-1 flex-col items-center">
+                    <h1 class="text-3xl text-bookmark-blue">Káva 1</h1>
+                    <p class="text-bookmark-grey my-4 text-center sm:w-3/4 lg:w-full">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos dolorem earum quidem dolor
+                        necessitatibus modi ab sed illum? Beatae iste doloremque illo.
+                    </p>
+                </div>
+            </div>
 
-		</div>
+        </div>
 
-	</section>
+    </section>
 
 
 </div>
 
 
 <div class="menu flex container mx-auto mt-10 md:mt-14 lg:mt-20">
-	<section class="items-center flex flex-col mx-auto w-full" id="nabidka-menu">
-		<div class="inline-block sm:flex items-center rounded-md shadow-sm gap-1 sm:gap-8 mb-8 md:mb-10 lg:mt-12" role="group">
-			<button data-content="hot" type="button"
-					class="px-2 py-4 sm:text-xl xs:text-base sm:px-8 font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white sm:line-height">
-				Teplé nápoje
-			</button>
-			<button data-content="cold" type="button"
-					class="px-2 py-4 sm:text-xl xs:text-base sm:px-8 font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white sm:line-height">
-				Studené nápoje
-			</button>
-			<button data-content="dessert" type="button"
-					class="px-2 py-4 sm:text-xl xs:text-base sm:px-8 font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white sm:line-height">
-				Zákusky
-			</button>
-		</div>
-		<!-- hot -->
-		<div class="content w-full" id="hot">
-			<div class="bg-white overflow-hidden w-full">
-				<div class="px-6 py-4">
-					<ul>
-						<li class="flex justify-between items-center py-2 flex-row pointer-events-none">
-							<span class="">Espresso</span>
-							<span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
-							<span>87 Kč</span>
-						</li>
-						<li class="flex justify-between items-center py-2 flex-row pointer-events-none">
-							<span class="flex">Cappuccino</span>
-							<span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
-							<span>87 Kč</span>
-						</li>
-						<li class="flex justify-between items-center py-2 flex-row pointer-events-none">
-							<span class="flex">Latte</span>
-							<span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
-							<span>87 Kč</span>
-						</li>
-						<li class="flex justify-between items-center py-2 flex-row pointer-events-none">
-							<span class="flex">Latte</span>
-							<span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
+    <section class="items-center flex flex-col mx-auto w-full" id="nabidka-menu">
+        <div
+                class="flex space-x-2 border-[3px] border-rose-800 rounded-xl select-none w-72 sm:w-127 h-12 sm:h-16 lg:h-16"
+        >
+            <label data-content="hot" type="button"
+                   class="w-16 flex flex-grow items-center justify-center rounded-lg p-1 cursor-pointer"
+            >
+                <input
+                        type="radio"
+                        name="radio"
+                        value="html"
+                        class="peer hidden"
+                        checked=""
+                />
+                <span class="text-xs p-2.5 sm:text-base sm:py-4 sm:p-[52px] tracking-widest peer-checked:bg-gradient-to-r peer-checked:from-gradient-red-dark peer-checked:to-gradient-red-light peer-checked:text-white text-gray-700 rounded-lg transition duration-150 ease-in-out"
+                >Coffee</span
+                >
+            </label>
 
-							<span>87 Kč</span>
-						</li>
-						<li class="flex justify-between items-center py-2 flex-row pointer-events-none">
-							<span class="flex">Latte</span>
-							<span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
-							<span>87 Kč</span>
-						</li>
-						<li class="flex justify-between items-center py-2 flex-row pointer-events-none">
-							<span class="flex">Latte</span>
-							<span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
+            <label data-content="cold" type="button"
+                   class="w-16 min-w-28 flex flex-grow items-center justify-center rounded-lg p-1 cursor-pointer"
+            >
+                <input type="radio" name="radio" value="react" class="peer hidden" />
+                <span
+                        class="text-xs p-2.5 sm:text-base sm:py-4 tracking-widest peer-checked:bg-gradient-to-r peer-checked:from-gradient-red-dark peer-checked:to-gradient-red-light peer-checked:text-white text-gray-700 rounded-lg transition duration-150 ease-in-out"
+                >Cold Coffee</span
+                >
+            </label>
 
-							<span>87 Kč</span>
-						</li>
-						<li class="flex justify-between items-center py-2 flex-row pointer-events-none">
-							<span class="flex">Latte</span>
-							<span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
+            <label data-content="dessert" type="button"
+                   class="w-16 flex flex-grow items-center justify-center rounded-lg p-1 cursor-pointer"
+            >
+                <input type="radio" name="radio" value="vue" class="peer hidden" />
+                <span
+                        class="text-xs p-2.5 sm:text-base sm:py-4 sm:p-[46px] tracking-widest peer-checked:bg-gradient-to-r peer-checked:from-gradient-red-dark peer-checked:to-gradient-red-light peer-checked:text-white text-gray-700 rounded-lg transition duration-150 ease-in-out"
+                >Dessert</span
+                >
+            </label>
+        </div>
+        <!-- hot -->
+        <div class="content w-full lg:w-3/4" id="hot">
+            <div class="bg-white overflow-hidden w-full">
+                <div class="px-6 py-4">
+                    <ul>
+                        <li class="flex justify-between items-center py-2 flex-row pointer-events-none">
+                            <span class="">Espresso</span>
+                            <span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
+                            <span>87 Kč</span>
+                        </li>
+                        <li class="flex justify-between items-center py-2 flex-row pointer-events-none">
+                            <span class="flex">Cappuccino</span>
+                            <span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
+                            <span>87 Kč</span>
+                        </li>
+                        <li class="flex justify-between items-center py-2 flex-row pointer-events-none">
+                            <span class="flex">Latte</span>
+                            <span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
+                            <span>87 Kč</span>
+                        </li>
+                        <li class="flex justify-between items-center py-2 flex-row pointer-events-none">
+                            <span class="flex">Latte</span>
+                            <span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
 
-							<span>87 Kč</span>
-						</li>
-					</ul>
-				</div>
-			</div>
+                            <span>87 Kč</span>
+                        </li>
+                        <li class="flex justify-between items-center py-2 flex-row pointer-events-none">
+                            <span class="flex">Latte</span>
+                            <span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
+                            <span>87 Kč</span>
+                        </li>
+                        <li class="flex justify-between items-center py-2 flex-row pointer-events-none">
+                            <span class="flex">Latte</span>
+                            <span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
 
-		</div>
-		<!-- cold -->
-		<div class="content w-full" id="cold">
-			<div class="bg-white rounded-lg overflow-hidden w-full">
-				<div class="px-6 py-4">
-					<ul>
-						<li class="flex justify-between items-center py-2 flex-row pointer-events-none">
-							<span class="flex">Matcha</span>
-							<span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
+                            <span>87 Kč</span>
+                        </li>
+                        <li class="flex justify-between items-center py-2 flex-row pointer-events-none">
+                            <span class="flex">Latte</span>
+                            <span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
 
-							<span>87 Kč</span>
-						</li>
-						<li class="flex justify-between items-center py-2 flex-row pointer-events-none">
-							<span class="flex">cold brew</span>
-							<span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
+                            <span>87 Kč</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-							<span>87 Kč</span>
-						</li>
-						<li class="flex justify-between items-center py-2 flex-row pointer-events-none">
-							<span class="flex">Latte</span>
-							<span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
+        </div>
+        <!-- cold -->
+        <div class="content hidden w-full lg:w-3/4" id="cold">
+            <div class="bg-white rounded-lg overflow-hidden w-full">
+                <div class="px-6 py-4">
+                    <ul>
+                        <li class="flex justify-between items-center py-2 flex-row pointer-events-none">
+                            <span class="flex">Matcha</span>
+                            <span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
 
-							<span>87 Kč</span>
-						</li>
-						<li class="flex justify-between items-center py-2 flex-row pointer-events-none">
-							<span class="flex">Latte</span>
-							<span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
+                            <span>87 Kč</span>
+                        </li>
+                        <li class="flex justify-between items-center py-2 flex-row pointer-events-none">
+                            <span class="flex">cold brew</span>
+                            <span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
 
-							<span>87 Kč</span>
-						</li>
-						<li class="flex justify-between items-center py-2 flex-row pointer-events-none">
-							<span class="flex">Latte</span>
-							<span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
+                            <span>87 Kč</span>
+                        </li>
+                        <li class="flex justify-between items-center py-2 flex-row pointer-events-none">
+                            <span class="flex">Latte</span>
+                            <span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
 
-							<span>87 Kč</span>
-						</li>
-						<li class="flex justify-between items-center py-2 flex-row pointer-events-none">
-							<span class="flex">Latte</span>
-							<span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
+                            <span>87 Kč</span>
+                        </li>
+                        <li class="flex justify-between items-center py-2 flex-row pointer-events-none">
+                            <span class="flex">Latte</span>
+                            <span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
 
-							<span>87 Kč</span>
-						</li>
-						<li class="flex justify-between items-center py-2 flex-row pointer-events-none">
-							<span class="flex-grow">Latte</span>
-														<span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
+                            <span>87 Kč</span>
+                        </li>
+                        <li class="flex justify-between items-center py-2 flex-row pointer-events-none">
+                            <span class="flex">Latte</span>
+                            <span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
 
-							<span>87 Kč</span>
-						</li>
-					</ul>
-				</div>
-			</div>
+                            <span>87 Kč</span>
+                        </li>
+                        <li class="flex justify-between items-center py-2 flex-row pointer-events-none">
+                            <span class="flex">Latte</span>
+                            <span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
 
-		</div>
-		<!-- desserts -->
-		<div class="content w-full" id="dessert">
-			<div class="bg-white rounded-lg overflow-hidden w-full">
-				<div class="px-6 py-4">
-					<ul>
-						<li class="flex justify-between items-center py-2 flex-row pointer-events-none">
-							<span class="flex">Dortík</span>
-							<span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
+                            <span>87 Kč</span>
+                        </li>
+                        <li class="flex justify-between items-center py-2 flex-row pointer-events-none">
+                            <span class="flex">Latte</span>
+                            <span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
 
-							<span>87 Kč</span>
-						</li>
-						<li class="flex justify-between items-center py-2 flex-row pointer-events-none">
-							<span class="flex">Quiche</span>
-							<span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
+                            <span>87 Kč</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- desserts -->
+        <div class="content hidden w-full lg:w-3/4" id="dessert">
+            <div class="bg-white rounded-lg overflow-hidden w-full">
+                <div class="px-6 py-4">
+                    <ul>
+                        <li class="flex justify-between items-center py-2 flex-row pointer-events-none">
+                            <span class="flex">Dortík</span>
+                            <span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
 
-							<span>87 Kč</span>
-						</li>
-						<li class="flex justify-between items-center py-2 flex-row pointer-events-none">
-							<span class="flex">Latte</span>
-							<span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
+                            <span>87 Kč</span>
+                        </li>
+                        <li class="flex justify-between items-center py-2 flex-row pointer-events-none">
+                            <span class="flex">Quiche</span>
+                            <span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
 
-							<span>87 Kč</span>
-						</li>
-						<li class="flex justify-between items-center py-2 flex-row pointer-events-none">
-							<span class="flex">Latte</span>
-							<span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
+                            <span>87 Kč</span>
+                        </li>
+                        <li class="flex justify-between items-center py-2 flex-row pointer-events-none">
+                            <span class="flex">Latte</span>
+                            <span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
 
-							<span>87 Kč</span>
-						</li>
-						<li class="flex justify-between items-center py-2 flex-row pointer-events-none">
-							<span class="flex">Latte</span>
-							<span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
+                            <span>87 Kč</span>
+                        </li>
+                        <li class="flex justify-between items-center py-2 flex-row pointer-events-none">
+                            <span class="flex">Latte</span>
+                            <span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
 
-							<span>87 Kč</span>
-						</li>
-						<li class="flex justify-between items-center py-2 flex-row pointer-events-none">
-							<span class="flex">Latte</span>
-							<span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
+                            <span>87 Kč</span>
+                        </li>
+                        <li class="flex justify-between items-center py-2 flex-row pointer-events-none">
+                            <span class="flex">Latte</span>
+                            <span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
 
-							<span>87 Kč</span>
-						</li>
-						<li class="flex justify-between items-center py-2 flex-row pointer-events-none">
-							<span class="flex">Latte</span>
-							<span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
+                            <span>87 Kč</span>
+                        </li>
+                        <li class="flex justify-between items-center py-2 flex-row pointer-events-none">
+                            <span class="flex">Latte</span>
+                            <span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
 
-							<span>87 Kč</span>
-						</li>
-					</ul>
-				</div>
-			</div>
+                            <span>87 Kč</span>
+                        </li>
+                        <li class="flex justify-between items-center py-2 flex-row pointer-events-none">
+                            <span class="flex">Latte</span>
+                            <span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
 
-		</div>
-	</section>
+                            <span>87 Kč</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
 </div>
 
-<section class="bg-gray-100 pt-16 pb-7 container mt-10 md:mt-14 lg:mt-20" id="reviews">
-	<div class="max-w-4xl mx-auto px-4">
-		<h2 class="text-3xl font-bold mb-4 text-center">Naše hodnocení</h2>
-		<p class="text-lg text-gray-700 mb-8 text-center">Podívejte se, co o nás říkají naši zákazníci.</p>
-
-		<!-- Review Sources -->
-		<div class="flex flex-col md:flex-row justify-center mb-8">
-			<div class="bg-white rounded-lg shadow-md p-6 md:ml-4">
-				<h3 class="text-xl font-semibold mb-2">Google Reviews</h3>
-				<div class="flex items-center mb-2">
-					<svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 text-yellow-500 mr-1">
-						<path fill-rule="evenodd"
-							  d="M10 0l2.097 6.441h6.778l-5.487 3.988 2.097 6.442-5.485-3.989-5.488 3.989 2.097-6.442-5.488-3.988h6.779l2.097-6.441z" />
-					</svg>
-					<span class="text-gray-700">4.8 / 5 <a
-						href="https://www.google.com/search?sa=X&sca_esv=f65ab4fb82876b19&tbm=lcl&sxsrf=ACQVn09bppIefKvX-aynKazRh2tdbockrg:1713795426632&q=Rest+Cafe+Recenze&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxI2szQzsjQwNjczMza2NDU1Mjcx28DI-IpRMCi1uETBOTEtVSEoNTk1ryp1ESumGAC0yUOoQgAAAA&rldimm=6962903766339552746&hl=cs-CZ&ved=2ahUKEwj0v_y8gdaFAxWNh_0HHZrGB58Q9fQKegQIFxAF&biw=1920&bih=919&dpr=1#lkt=LocalPoiReviews"
-						target="_blank" class="underline">(239 hodnocení)</a>
+<section class="bg-gray-100 pt-16 pb-7 container mt-10 md:mt-14 lg:mt-20 relative" id="reviews">
+    <div class="max-w-4xl mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-4 text-center">Naše hodnocení</h2>
+        <p class="text-lg text-gray-700 mb-8 text-center">Podívejte se, co o nás říkají naši zákazníci.</p>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="bg-white rounded-lg shadow-md p-6 md:ml-4">
+                        <h3 class="text-xl font-semibold mb-2">Google Reviews</h3>
+                        <div class="flex items-center mb-2">
+                            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 text-yellow-500 mr-1">
+                                <path fill-rule="evenodd"
+                                      d="M10 0l2.097 6.441h6.778l-5.487 3.988 2.097 6.442-5.485-3.989-5.488 3.989 2.097-6.442-5.488-3.988h6.779l2.097-6.441z" />
+                            </svg>
+                            <span class="text-gray-700">4.8 / 5 <a
+                                        href="https://www.google.com/search?sa=X&sca_esv=f65ab4fb82876b19&tbm=lcl&sxsrf=ACQVn09bppIefKvX-aynKazRh2tdbockrg:1713795426632&q=Rest+Cafe+Recenze&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxI2szQzsjQwNjczMza2NDU1Mjcx28DI-IpRMCi1uETBOTEtVSEoNTk1ryp1ESumGAC0yUOoQgAAAA&rldimm=6962903766339552746&hl=cs-CZ&ved=2ahUKEwj0v_y8gdaFAxWNh_0HHZrGB58Q9fQKegQIFxAF&biw=1920&bih=919&dpr=1#lkt=LocalPoiReviews"
+                                        target="_blank" class="underline">(239 hodnocení)</a>
 					</span>
-				</div>
-				<p class="text-gray-700"><span class="italic">"Skvělá kavárna s výbornou kávou (i horkou čokoládou) a naprosto vynikajícími dezerty"</span>
-					<br> <span class="font-bold">-Magdalena</span></p>
-			</div>
-
-		</div>
-
-
-	</div>
-
+                        </div>
+                        <p class="text-gray-700"><span class="italic">"Skvělá kavárna s výbornou kávou (i horkou čokoládou) a naprosto vynikajícími dezerty"</span>
+                            <br> <span class="font-bold">-Magdalena</span></p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="bg-white rounded-lg shadow-md p-6 md:ml-4">
+                        <h3 class="text-xl font-semibold mb-2">Facebook Reviews</h3>
+                        <div class="flex items-center mb-2">
+                            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 text-yellow-500 mr-1">
+                                <path fill-rule="evenodd"
+                                      d="M10 0l2.097 6.441h6.778l-5.487 3.988 2.097 6.442-5.485-3.989-5.488 3.989 2.097-6.442-5.488-3.988h6.779l2.097-6.441z" />
+                            </svg>
+                            <span class="text-gray-700">4.5 / 5 <a
+                                        href="https://www.facebook.com/search/top/?q=Rest%20Cafe%20Recenze&epa=SEARCH_BOX"
+                                        target="_blank" class="underline">(123 hodnocení)</a>
+					</span>
+                        </div>
+                        <p class="text-gray-700"><span class="italic">"Skvělé místo s přátelskou atmosférou a skvělým personálem"</span>
+                            <br> <span class="font-bold">-Jan</span></p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="bg-white rounded-lg shadow-md p-6 md:ml-4">
+                        <h3 class="text-xl font-semibold mb-2">Facebook Reviews</h3>
+                        <div class="flex items-center mb-2">
+                            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 text-yellow-500 mr-1">
+                                <path fill-rule="evenodd"
+                                      d="M10 0l2.097 6.441h6.778l-5.487 3.988 2.097 6.442-5.485-3.989-5.488 3.989 2.097-6.442-5.488-3.988h6.779l2.097-6.441z" />
+                            </svg>
+                            <span class="text-gray-700">4.5 / 5 <a
+                                        href="https://www.facebook.com/search/top/?q=Rest%20Cafe%20Recenze&epa=SEARCH_BOX"
+                                        target="_blank" class="underline">(123 hodnocení)</a>
+					</span>
+                        </div>
+                        <p class="text-gray-700"><span class="italic">"Skvělé místo s přátelskou atmosférou a skvělým personálem"</span>
+                            <br> <span class="font-bold">-Jan</span></p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="bg-white rounded-lg shadow-md p-6 md:ml-4">
+                        <h3 class="text-xl font-semibold mb-2">Facebook Reviews</h3>
+                        <div class="flex items-center mb-2">
+                            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 text-yellow-500 mr-1">
+                                <path fill-rule="evenodd"
+                                      d="M10 0l2.097 6.441h6.778l-5.487 3.988 2.097 6.442-5.485-3.989-5.488 3.989 2.097-6.442-5.488-3.988h6.779l2.097-6.441z" />
+                            </svg>
+                            <span class="text-gray-700">4.5 / 5 <a
+                                        href="https://www.facebook.com/search/top/?q=Rest%20Cafe%20Recenze&epa=SEARCH_BOX"
+                                        target="_blank" class="underline">(123 hodnocení)</a>
+					</span>
+                        </div>
+                        <p class="text-gray-700"><span class="italic">"Skvělé místo s přátelskou atmosférou a skvělým personálem"</span>
+                            <br> <span class="font-bold">-Jan</span></p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="bg-white rounded-lg shadow-md p-6 md:ml-4">
+                        <h3 class="text-xl font-semibold mb-2">Facebook Reviews</h3>
+                        <div class="flex items-center mb-2">
+                            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 text-yellow-500 mr-1">
+                                <path fill-rule="evenodd"
+                                      d="M10 0l2.097 6.441h6.778l-5.487 3.988 2.097 6.442-5.485-3.989-5.488 3.989 2.097-6.442-5.488-3.988h6.779l2.097-6.441z" />
+                            </svg>
+                            <span class="text-gray-700">4.5 / 5 <a
+                                        href="https://www.facebook.com/search/top/?q=Rest%20Cafe%20Recenze&epa=SEARCH_BOX"
+                                        target="_blank" class="underline">(123 hodnocení)</a>
+					</span>
+                        </div>
+                        <p class="text-gray-700"><span class="italic">"Skvělé místo s přátelskou atmosférou a skvělým personálem"</span>
+                            <br> <span class="font-bold">-Jan</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
 </section>
 
 <section class="bg-white mt-10 md:mt-14 lg:mt-20" id="location">
-	<div class="max-w-7xl mx-auto px-4">
-		<h2 class="text-3xl font-bold mb-4 text-center">Kde nás najdete?</h2>
-		<p class="text-lg text-gray-700 text-center">Nacházíme se v samém srdci Václavského náměstí.</p>
-		<div class="flex flex-col items-center mb-8 mt-[1rem]">
-		<p class="font-bold">Rest Café</p>
-		<p class="">Jindřišská 2, Nové Město</p>
-		<p class="">110 00, Praha</p>
-		</div>
-
-
-		<a href="https://www.google.com/maps/place/Rest+Cafe/@50.0827484,14.4241915,17z/data=!3m1!4b1!4m6!3m5!1s0x470b954ba8aaa593:0x60a134159de605ea!8m2!3d50.082745!4d14.4267664!16s%2Fg%2F11r4ryjcq8?entry=ttu"
-		   target="_blank">
-			<img class="container " src="./restmap2.svg" alt="">
-		</a>
-
-	</div>
-
+    <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-4 text-center">Kde nás najdete?</h2>
+        <div class="flex flex-col items-center mb-8 mt-[1rem]">
+            <p class="font-bold">Rest Café</p>
+            <p class="">Jindřišská 2, Nové Město</p>
+            <p class="">110 00, Praha</p>
+        </div>
+        <a href="https://www.google.com/maps/place/Rest+Cafe/@50.0827484,14.4241915,17z/data=!3m1!4b1!4m6!3m5!1s0x470b954ba8aaa593:0x60a134159de605ea!8m2!3d50.082745!4d14.4267664!16s%2Fg%2F11r4ryjcq8?entry=ttu"
+           target="_blank">
+            <img class="container " src="./restmap2.svg" alt="">
+        </a>
+    </div>
 </section>
 
 <section class="max-w-screen-xl mx-auto px-6">
     <h1 class="text-3xl font-bold mb-4">Instagram Photos</h1>
-	
     <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-auto">
-		<% imageData.slice(0, 8).forEach(image => { %>
-			<li class="relative">
-				<div class="overflow-hidden rounded-lg shadow-lg">
-					<a href="<%= image.permalink %>" target="_blank" class="block">
-						<img src="<%= image.media_url %>" alt="<%= image.caption %>" class="w-full h-full transition duration-300 transform hover:scale-105">
-						<div class="absolute top-0 left-0 w-full h-full bg-white opacity-0 hover:opacity-75 flex items-center justify-center text-black text-opacity-100 hover:text-opacity-100 transition duration-300">
-							<p class="text-center p-4"><%= image.caption %></p>
-						</div>
-					</a>
-				</div>
-			</li>
-		<% }); %>
-	</ul>
-	
+        <% imageData.slice(0, 8).forEach(image => { %>
+            <li class="relative">
+                <div class="overflow-hidden rounded-lg shadow-lg">
+                    <a href="<%= image.permalink %>" target="_blank" class="block">
+                        <img src="<%= image.media_url %>" alt="<%= image.caption %>"
+                             class="w-full h-full transition duration-300 transform hover:scale-105">
+                        <div class="absolute top-0 left-0 w-full h-full bg-white opacity-0 hover:opacity-75 flex items-center justify-center text-black text-opacity-100 hover:text-opacity-100 transition duration-300">
+                            <p class="text-center p-4"><%= image.caption %></p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+        <% }); %>
+    </ul>
 </section>
 
 
 <footer class="bg-gradient-to-r from-red-950 to-red-700 mt-10 md:mt-14 lg:mt-20">
-	<div class="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-		<div class="grid gap-10 row-gap-6 mb-8 sm:grid-cols-3 lg:grid-cols-3">
-			<div class="sm:col-span-1">
-				<a href="/" aria-label="Go home" title="Company" class="inline-flex items-center">
-					<img class="h-32" src="./restlogo.png" alt="">
-				</a>
+    <div class="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+        <div class="grid gap-10 row-gap-6 mb-8 sm:grid-cols-3 lg:grid-cols-3">
+            <div class="sm:col-span-1">
+                <a href="/" aria-label="Go home" title="Company" class="inline-flex items-center">
+                    <img class="h-32" src="./restlogo.png" alt="">
+                </a>
+            </div>
+            <div class="space-y-2 text-lg sm:text-sm flex flex-col">
+                <p class="text-base font-bold tracking-wide text-white">Kontakt</p>
+                <div class="flex">
+                    <p class="mr-1 text-white">Phone:</p>
+                    <a href="tel:123-456-789" aria-label="Our phone" title="Our phone"
+                       class="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800">+420
+                        123 456 789</a>
+                </div>
+                <div class="flex">
+                    <p class="mr-1 text-white">Email:</p>
+                    <a href="mailto:test@seznam.cz" aria-label="Our email" title="Our email"
+                       class="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800">info@restcafe.cz</a>
+                </div>
+                <div class="flex">
+                    <p class="mr-1 text-white">Adresa:</p>
+                    <a href="https://www.google.com/maps/place/Rest+Cafe/@50.0827484,14.4241915,17z/data=!3m1!4b1!4m6!3m5!1s0x470b954ba8aaa593:0x60a134159de605ea!8m2!3d50.082745!4d14.4267664!16s%2Fg%2F11r4ryjcq8?entry=ttu"
+                       target="_blank" rel="noopener noreferrer" aria-label="Our address" title="Our address"
+                       class="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800">
+                        Jindřišská 2, 110 00, Praha 1
+                    </a>
+                </div>
+            </div>
+            <div>
+                <span class="sm:text-base text-lg font-bold tracking-wide text-white">Sledujte nás</span>
+                <div class="flex items-center mt-1 space-x-3">
+                    <a href="/" class="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400">
 
-			</div>
-			<div class="space-y-2 text-lg sm:text-sm flex flex-col">
-				<p class="text-base font-bold tracking-wide text-white">Kontakt</p>
-				<div class="flex">
-					<p class="mr-1 text-white">Phone:</p>
-					<a href="tel:123-456-789" aria-label="Our phone" title="Our phone"
-					   class="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800">+420
-						123 456 789</a>
-				</div>
-				<div class="flex">
-					<p class="mr-1 text-white">Email:</p>
-					<a href="mailto:test@seznam.cz" aria-label="Our email" title="Our email"
-					   class="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800">info@restcafe.cz</a>
-				</div>
-				<div class="flex">
-					<p class="mr-1 text-white">Adresa:</p>
-					<a href="https://www.google.com/maps/place/Rest+Cafe/@50.0827484,14.4241915,17z/data=!3m1!4b1!4m6!3m5!1s0x470b954ba8aaa593:0x60a134159de605ea!8m2!3d50.082745!4d14.4267664!16s%2Fg%2F11r4ryjcq8?entry=ttu"
-					   target="_blank" rel="noopener noreferrer" aria-label="Our address" title="Our address"
-					   class="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800">
-						Jindřišská 2, 110 00, Praha 1
-					</a>
-				</div>
-			</div>
-			<div>
-				<span class="sm:text-base text-lg font-bold tracking-wide text-white">Sledujte nás</span>
-				<div class="flex items-center mt-1 space-x-3">
-					<a href="/" class="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400">
-
-					</a>
-					<a href="https://www.instagram.com/restcafe.cz/"
-					   class="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
-					   target="_blank">
-						<svg viewBox="0 0 30 30" fill="currentColor" class="h-6">
-							<circle cx="15" cy="15" r="4"></circle>
-							<path
-								d="M19.999,3h-10C6.14,3,3,6.141,3,10.001v10C3,23.86,6.141,27,10.001,27h10C23.86,27,27,23.859,27,19.999v-10   C27,6.14,23.859,3,19.999,3z M15,21c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S18.309,21,15,21z M22,9c-0.552,0-1-0.448-1-1   c0-0.552,0.448-1,1-1s1,0.448,1,1C23,8.552,22.552,9,22,9z"
-							></path>
-						</svg>
-					</a>
-					<a href="https://www.facebook.com/restcafecz/"
-					   class="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
-					   target="_blank">
-						<svg viewBox="0 0 24 24" fill="currentColor" class="h-5">
-							<path
-								d="M22,0H2C0.895,0,0,0.895,0,2v20c0,1.105,0.895,2,2,2h11v-9h-3v-4h3V8.413c0-3.1,1.893-4.788,4.659-4.788 c1.325,0,2.463,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.795,0.715-1.795,1.763V11h4.44l-1,4h-3.44v9H22c1.105,0,2-0.895,2-2 V2C24,0.895,23.105,0,22,0z"
-							></path>
-						</svg>
-					</a>
-				</div>
-			</div>
-		</div>
-		<div class="flex flex-col-reverse justify-between pt-5 pb-10 border-t lg:flex-row">
-			<p class="text-sm text-white">
-				© Copyright 2024 Pham Kučera Productions.
-			</p>
-			<!-- <ul class="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
-			  <li>
-				<a href="/" class="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">F.A.Q</a>
-			  </li>
-			  <li>
-				<a href="/" class="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">Privacy Policy</a>
-			  </li>
-			  <li>
-				<a href="/" class="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">Terms &amp; Conditions</a>
-			  </li>
-			</ul> -->
-		</div>
-	</div>
+                    </a>
+                    <a href="https://www.instagram.com/restcafe.cz/"
+                       class="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
+                       target="_blank">
+                        <svg viewBox="0 0 30 30" fill="currentColor" class="h-6">
+                            <circle cx="15" cy="15" r="4"></circle>
+                            <path
+                                    d="M19.999,3h-10C6.14,3,3,6.141,3,10.001v10C3,23.86,6.141,27,10.001,27h10C23.86,27,27,23.859,27,19.999v-10   C27,6.14,23.859,3,19.999,3z M15,21c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S18.309,21,15,21z M22,9c-0.552,0-1-0.448-1-1   c0-0.552,0.448-1,1-1s1,0.448,1,1C23,8.552,22.552,9,22,9z"
+                            ></path>
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/restcafecz/"
+                       class="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
+                       target="_blank">
+                        <svg viewBox="0 0 24 24" fill="currentColor" class="h-5">
+                            <path
+                                    d="M22,0H2C0.895,0,0,0.895,0,2v20c0,1.105,0.895,2,2,2h11v-9h-3v-4h3V8.413c0-3.1,1.893-4.788,4.659-4.788 c1.325,0,2.463,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.795,0.715-1.795,1.763V11h4.44l-1,4h-3.44v9H22c1.105,0,2-0.895,2-2 V2C24,0.895,23.105,0,22,0z"
+                            ></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col-reverse justify-between pt-5 pb-10 border-t lg:flex-row">
+            <p class="text-sm text-white">
+                © Copyright 2024 Pham Kučera Productions.
+            </p>
+            <!-- <ul class="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
+              <li>
+                <a href="/" class="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">F.A.Q</a>
+              </li>
+              <li>
+                <a href="/" class="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="/" class="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">Terms &amp; Conditions</a>
+              </li>
+            </ul> -->
+        </div>
+    </div>
 </footer>
 
 
@@ -489,13 +585,13 @@
 	</div>
 </footer> -->
 <button id="scrollTopBtn" class="hidden fixed bottom-4 right-4 bg-gray-800 text-white px-2 py-2 rounded-lg shadow-md">
-	<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-		<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-	</svg>
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+    </svg>
 </button>
-
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 <script src="script.js" type="module"></script>
-
 </body>
 </html>

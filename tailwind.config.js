@@ -5,6 +5,9 @@ module.exports = {
 ],
   theme: {
     extend: {
+      width: {
+        '127': '32rem',
+      },
       colors: {
         "bookmark-purple": "#5267DF",
         "bookmark-red": "#FA5959",
@@ -12,6 +15,8 @@ module.exports = {
         "bookmark-grey": "#9194A2",
         "bookmark-white": "#f7f7f7",
         "custom-purple": "#E9D5FF",
+        "gradient-red-dark": "#450a0a",
+        "gradient-red-light": "#b91c1c",
       },
       linearGradientColors: {
         "custom-gradient": ["#000000", "#656565"]

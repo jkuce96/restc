@@ -136,27 +136,32 @@ aboutZoom();
 
 
 
-document.addEventListener('DOMContentLoaded', function() {
-    const buttons = document.querySelectorAll('button[data-content]');
-    const contents = document.querySelectorAll('.content');
+document.addEventListener("DOMContentLoaded", function() {
+    const labels = document.querySelectorAll("label[data-content]");
 
-    for (let i = 1; i < contents.length; i++) {
-        contents[i].style.display = 'none';
-    }
-
-    buttons.forEach(button => {
-        button.addEventListener('click', function() {
-            const contentId = this.getAttribute('data-content');
-            const selectedContent = document.getElementById(contentId);
-
-            contents.forEach(content => {
-                content.style.display = 'none';
+    labels.forEach(function(label) {
+        label.addEventListener("click", function() {
+            const contentId = this.getAttribute("data-content");
+            const content = document.getElementById(contentId);
+            const allContents = document.querySelectorAll(".content");
+            allContents.forEach(function(element) {
+                element.classList.add("hidden");
             });
 
-            if (selectedContent) {
-                selectedContent.style.display = 'block';
-            }
+            content.classList.remove("hidden");
         });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 2,
+        autoplay: {
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
     });
 });
 
