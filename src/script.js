@@ -155,13 +155,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
 document.addEventListener('DOMContentLoaded', function () {
     var swiper = new Swiper('.swiper-container', {
-        slidesPerView: 2,
+        slidesPerView: 1,
+        spaceBetween: 30,
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+            },
+        },
         autoplay: {
+            pauseOnMouseEnter: true,
         },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
+        loop: true,
     });
 });
 
