@@ -75,9 +75,25 @@ counters.forEach(counter => {
   observer.observe(counter);
 });
 
-  
 
 
+window.addEventListener('scroll', function() {
+    var header = document.getElementById('header');
+    var links = header.querySelectorAll('a');
+    if (window.scrollY > 50) {
+        header.classList.add('bg-white');
+        links.forEach(link => {
+            link.classList.remove('text-white');
+            link.classList.add('text-black');
+        })
+    } else {
+        header.classList.remove('bg-white');
+        links.forEach(link => {
+            link.classList.remove('text-black');
+            link.classList.add('text-white');
+        })
+    }
+});
 
 
 function aboutZoom() {
@@ -97,11 +113,11 @@ function aboutZoom() {
               menuButtons.forEach(button => {
                   if (button.getAttribute("href").substring(1) === targetId) {
                       menuButtons.forEach(btn => {
-                          btn.classList.remove("text-blue-700");
+                          btn.classList.remove("text-red-700");
                           btn.classList.add("text-gray-900");
                       });
                       button.classList.remove("text-gray-900");
-                      button.classList.add("text-blue-700");
+                      button.classList.add("text-red-700");
                   }
               });
           }
@@ -113,16 +129,16 @@ function aboutZoom() {
           e.preventDefault();
 
           menuButtons.forEach(btn => {
-              btn.classList.remove("text-blue-700");
+              btn.classList.remove("text-red-700");
               btn.classList.add("text-gray-900");
           });
 
           button.classList.remove("text-gray-900");
-          button.classList.add("text-blue-700");
+          button.classList.add("text-red-700");
 
           let targetId = button.getAttribute("href").substring(1);
           let target = document.getElementById(targetId);
-          let targetPosition = target.offsetTop - 40;
+          let targetPosition = target.offsetTop - 80;
           window.scrollTo({
               top: targetPosition,
               behavior: 'smooth'
@@ -200,6 +216,3 @@ window.addEventListener('scroll', () => {
 
 // Event listener to scroll to the top when the button is clicked
 scrollTopBtn.addEventListener('click', scrollToTop);
-
-
-aboutZoom();
