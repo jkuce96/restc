@@ -17,66 +17,61 @@
 </head>
 <body class="bg-white">
 
-
-<header id="header" class="bg-transparent transition duration-300 fixed w-full z-20 top-0 start-0">
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-10 px-8">
-        <div>
-            <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-                <img src="./restlogo.png" class="h-16" alt="restcafe logo">
-            </a>
+<section class="bg-cover bg-center flex flex-col justify-center pt-9 min-h-screen md:w-full relative" id="navb" style="background-image: url(./restpobocka.jpg)">
+    <header id="header" class="bg-transparent transition duration-300 fixed w-full z-20 top-0 start-0">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-6 px-8">
+            <div>
+                <a href="/" class="flex items-center">
+                    <img src="./restlogo.png" class="h-16" alt="restcafe logo">
+                </a>
+            </div>
+            <div class="flex md:order-2 md:hidden">
+                <button data-collapse-toggle="navbar-sticky" type="button"
+                        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                        aria-controls="navbar-sticky" aria-expanded="false">
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                         viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+            </div>
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+                <ul id="list-items-burger"
+                    class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+                    <li>
+                        <a href="#navb"
+                           class="block py-2 text-white px-3 rounded md:text-xl md:bg-transparent hover:text-red-700 md:p-0 menu-button"
+                           aria-current="page">Domů</a>
+                    </li>
+                    <li>
+                        <a href="#about-us"
+                           class="block py-2 text-white px-3 rounded md:text-xl md:hover:bg-transparent hover:text-red-700 md:p-0 menu-button"
+                        >O nás</a>
+                    </li>
+                    <li>
+                        <a href="#nabidka-menu"
+                           class="block py-2 text-white px-3 rounded md:text-xl md:hover:bg-transparent hover:text-red-700 md:p-0 menu-button"
+                        >Nabídka</a>
+                    </li>
+                    <li>
+                        <a href="#location"
+                           class="block py-2 text-white px-3 rounded md:text-xl md:hover:bg-transparent hover:text-red-700 md:p-0 menu-button"
+                        >Kde nás najdete?</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="flex md:order-2 md:hidden space-x-3 md:space-x-0 rtl:space-x-reverse">
-            <button data-collapse-toggle="navbar-sticky" type="button"
-                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-                    aria-controls="navbar-sticky" aria-expanded="false">
-                <span class="sr-only">Open main menu</span>
-                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                     viewBox="0 0 17 14">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                          d="M1 1h15M1 7h15M1 13h15" />
-                </svg>
-            </button>
-        </div>
-        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-            <ul id="list-items-burger"
-                class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
-                <li>
-                    <a href="#navb"
-                       class="block py-2 text-white px-3 rounded md:text-xl md:bg-transparent hover:text-red-700 md:p-0 menu-button"
-                       aria-current="page">Domů</a>
-                </li>
-                <li>
-                    <a href="#about-us"
-                       class="block py-2 text-white px-3 rounded md:text-xl md:hover:bg-transparent hover:text-red-700 md:p-0 menu-button"
-                       >O nás</a>
-                </li>
-                <li>
-                    <a href="#nabidka-menu"
-                       class="block py-2 text-white px-3 rounded md:text-xl md:hover:bg-transparent hover:text-red-700 md:p-0 menu-button"
-                       >Nabídka</a>
-                </li>
-                <li>
-                    <a href="#location"
-                       class="block py-2 text-white px-3 rounded md:text-xl md:hover:bg-transparent hover:text-red-700 md:p-0 menu-button"
-                    >Kde nás najdete?</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</header>
-
-
-<section class="bg-cover bg-center flex flex-col justify-center pt-9 min-h-screen md:w-full relative" id="navb"
-         style="background-image: url(./restpobocka.jpg)">
+    </header>
     <div class="absolute inset-0 bg-black opacity-50"></div>
-    <header class="container relative items-center flex flex-col justify-center py-12 sm:pt-20">
+    <div class="container relative items-center flex flex-col justify-center py-12 sm:pt-20">
         <h1 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-center text-white z-10">Welcome to Rest
             Caaafé</h1>
         <p class="text-lg md:text-xl lg:text-2xl xl:text-3xl text-center mt-4 px-4 md:px-0 text-white z-10">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed euismod, nunc eget aliquet
             lacinia, mauris nunc tincidunt nunc, id tincidunt urna ligula id nunc. Sed euismod, nunc eget aliquet
             lacinia, mauris nunc tincidunt nunc, id tincidunt urna ligula id nunc.</p>
-    </header>
+    </div>
 </section>
 
 
