@@ -1,44 +1,21 @@
 
-
-//burger
-/*const navbarSticky = document.getElementById("navbar-sticky");
-const button = document.querySelector("[data-collapse-toggle='navbar-sticky']");
-
-function hideStickyNav() {
-    navbarSticky.classList.add("hidden");
-}
-
-function toggleStickyNav() {
-    navbarSticky.classList.toggle("hidden");
-}
-
-document.addEventListener("click", function(event) {
-    if (event.target !== button && !navbarSticky.contains(event.target)) {
-        hideStickyNav();
-    }
-});
-
-button.addEventListener("click", function(event) {
-    event.stopPropagation();
-    toggleStickyNav();
-});*/
-
-
 window.addEventListener('scroll', function() {
-    var header = document.getElementById('header');
-    var links = header.querySelectorAll('a');
-    if (window.scrollY > 50) {
-        header.classList.add('bg-white');
-        links.forEach(link => {
-            link.classList.remove('text-white');
-            link.classList.add('text-black');
-        })
-    } else {
-        header.classList.remove('bg-white');
-        links.forEach(link => {
-            link.classList.remove('text-black');
-            link.classList.add('text-white');
-        })
+    if (window.innerWidth > 768) {
+        var header = document.getElementById('header');
+        var links = header.querySelectorAll('a');
+        if (window.scrollY > 50) {
+            header.classList.add('bg-white', 'shadow-lg');
+            links.forEach(link => {
+                link.classList.remove('md:text-white');
+                link.classList.add('md:text-black');
+            })
+        } else {
+            header.classList.remove('bg-white', 'shadow-lg');
+            links.forEach(link => {
+                link.classList.remove('md:text-black');
+                link.classList.add('md:text-white');
+            })
+        }
     }
 });
 
@@ -85,7 +62,7 @@ function aboutZoom() {
 
           let targetId = button.getAttribute("href").substring(1);
           let target = document.getElementById(targetId);
-          let targetPosition = target.offsetTop - 80;
+          let targetPosition = target.offsetTop - 130;
           window.scrollTo({
               top: targetPosition,
               behavior: 'smooth'
@@ -97,9 +74,24 @@ function aboutZoom() {
 // Call the aboutZoom function to initialize it
 aboutZoom();
 
-
-
 document.addEventListener("DOMContentLoaded", function() {
+    const burgerButton = document.getElementById('burger-button');
+    const burgerMenu = document.getElementById('navbar-sticky');
+    const menuLinks = burgerMenu.querySelectorAll('a');
+
+    burgerButton.addEventListener('click', function () {
+        const isMenuOpen = burgerMenu.classList.toggle('hidden');
+        document.body.classList.toggle('overflow-hidden', !isMenuOpen);
+    });
+
+    menuLinks.forEach(link => {
+        link.addEventListener('click', function () {
+            burgerMenu.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        });
+    });
+
+
     const labels = document.querySelectorAll("label[data-content]");
 
     labels.forEach(function(label) {
@@ -114,9 +106,7 @@ document.addEventListener("DOMContentLoaded", function() {
             content.classList.remove("hidden");
         });
     });
-});
 
-document.addEventListener('DOMContentLoaded', function () {
     var swiper = new Swiper('.swiper-container', {
         slidesPerView: 1,
         spaceBetween: 30,
@@ -131,7 +121,6 @@ document.addEventListener('DOMContentLoaded', function () {
         loop: true,
     });
 });
-
 
 // Get the scroll to top button element
 const scrollTopBtn = document.getElementById('scrollTopBtn');

@@ -12,52 +12,35 @@
     <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.7/dist/countUp.umd.js"></script>
 
     <link href="output.css" rel="stylesheet" />
-
-
 </head>
 <body class="bg-white">
-
 <section class="bg-cover bg-center flex flex-col justify-center pt-9 min-h-screen md:w-full relative" id="navb" style="background-image: url(./restpobocka.jpg)">
-    <header id="header" class="bg-transparent transition duration-300 fixed w-full z-20 top-0 start-0">
+    <header id="header" class="bg-transparent transition duration-300 absolute md:fixed w-full z-20 top-0 start-0">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-6 px-8">
-            <div>
+            <div class="max-md:z-10">
                 <a href="/" class="flex items-center">
                     <img src="./restlogo.png" class="h-16" alt="restcafe logo">
                 </a>
             </div>
-            <div class="flex md:order-2 md:hidden">
-                <button data-collapse-toggle="navbar-sticky" type="button"
+            <div class="flex md:order-2 md:hidden max-md:z-10">
+                <button id="burger-button" data-collapse-toggle="navbar-sticky" type="button"
                         class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                         aria-controls="navbar-sticky" aria-expanded="false">
-                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                         viewBox="0 0 17 14">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="M1 1h15M1 7h15M1 13h15" />
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
                     </svg>
                 </button>
             </div>
-            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-                <ul id="list-items-burger"
-                    class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+            <div id="navbar-sticky" class="hidden items-center justify-between w-full md:flex md:w-auto md:order-1 max-md:fixed max-md:inset-0 max-md:pt-[112px] max-md:bg-white">
+                <ul id="list-items-burger" class="flex flex-col px-6 md:p-0 mt-4 font-medium rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0">
                     <li>
-                        <a href="#navb"
-                           class="block py-2 text-white px-3 rounded md:text-xl md:bg-transparent hover:text-red-700 md:p-0 menu-button"
-                           aria-current="page">Domů</a>
+                        <a href="#about-us" class="block py-2 text-black md:text-white px-3 rounded text-xl md:hover:bg-transparent hover:text-red-700 md:p-0 menu-button">O nás</a>
                     </li>
                     <li>
-                        <a href="#about-us"
-                           class="block py-2 text-white px-3 rounded md:text-xl md:hover:bg-transparent hover:text-red-700 md:p-0 menu-button"
-                        >O nás</a>
+                        <a href="#nabidka-menu" class="block py-2 text-black md:text-white px-3 rounded text-xl md:hover:bg-transparent hover:text-red-700 md:p-0 menu-button">Nabídka</a>
                     </li>
                     <li>
-                        <a href="#nabidka-menu"
-                           class="block py-2 text-white px-3 rounded md:text-xl md:hover:bg-transparent hover:text-red-700 md:p-0 menu-button"
-                        >Nabídka</a>
-                    </li>
-                    <li>
-                        <a href="#location"
-                           class="block py-2 text-white px-3 rounded md:text-xl md:hover:bg-transparent hover:text-red-700 md:p-0 menu-button"
-                        >Kde nás najdete?</a>
+                        <a href="#location" class="block py-2 text-black md:text-white px-3 rounded text-xl md:hover:bg-transparent hover:text-red-700 md:p-0 menu-button">Kde nás najdete?</a>
                     </li>
                 </ul>
             </div>
@@ -65,15 +48,11 @@
     </header>
     <div class="absolute inset-0 bg-black opacity-50"></div>
     <div class="container relative items-center flex flex-col justify-center py-12 sm:pt-20">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-center text-white z-10">Welcome to Rest
-            Caaafé</h1>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-center text-white z-10">Welcome to Rest Caaafé</h1>
         <p class="text-lg md:text-xl lg:text-2xl xl:text-3xl text-center mt-4 px-4 md:px-0 text-white z-10">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed euismod, nunc eget aliquet
-            lacinia, mauris nunc tincidunt nunc, id tincidunt urna ligula id nunc. Sed euismod, nunc eget aliquet
-            lacinia, mauris nunc tincidunt nunc, id tincidunt urna ligula id nunc.</p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed euismod, nunc eget aliquet lacinia, mauris nunc tincidunt nunc, id tincidunt urna ligula id nunc. Sed euismod, nunc eget aliquet lacinia, mauris nunc tincidunt nunc, id tincidunt urna ligula id nunc.</p>
     </div>
 </section>
-
 
 <div class="max-w-screen-xl mx-auto px-4 mt-10 md:mt-14 lg:mt-20 justify-center items-center">
     <!-- KDO JSME? -->
@@ -81,7 +60,7 @@
         <!-- HEADING -->
         <div class="sm:w-3/4 lg:w-5/12 mx-auto px-2">
             <h1 class="text-3xl text-center text-bookmark-blue">Featurky</h1>
-            <p class="text-center text-bookmark-grey mt-4">
+            <p class="text-center text-black mt-4">
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque tincidunt scelerisque libero. Etiam
                 bibendum elit eget erat. Nunc dapibus tortor vel mi dapibus sollicitudin.
             </p>
@@ -96,7 +75,7 @@
                 <!-- CONTENT -->
                 <div class="flex flex-1 flex-col items-center">
                     <h1 class="text-3xl text-bookmark-blue">Káva 1</h1>
-                    <p class="text-bookmark-grey my-4 text-center sm:w-3/4 lg:w-full">
+                    <p class="text-black my-4 text-center sm:w-3/4 lg:w-full">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos dolorem earum quidem dolor
                         necessitatibus modi ab sed illum? Beatae iste doloremque illo.
                     </p>
@@ -114,7 +93,7 @@
                 <!-- CONTENT -->
                 <div class="flex flex-1 flex-col items-center">
                     <h1 class="text-3xl text-bookmark-blue">Kávička</h1>
-                    <p class="text-bookmark-grey my-4 text-center sm:text-center sm:w-3/4 lg:w-full">
+                    <p class="text-black my-4 text-center sm:text-center sm:w-3/4 lg:w-full">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis voluptates sit eum, distinctio
                         illo dicta beatae dolore voluptatum accusamus.
                     </p>
@@ -132,7 +111,7 @@
                 <!-- CONTENT -->
                 <div class="flex flex-1 flex-col items-center">
                     <h1 class="text-3xl text-bookmark-blue">Káva 1</h1>
-                    <p class="text-bookmark-grey my-4 text-center sm:w-3/4 lg:w-full">
+                    <p class="text-black my-4 text-center sm:w-3/4 lg:w-full">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos dolorem earum quidem dolor
                         necessitatibus modi ab sed illum? Beatae iste doloremque illo.
                     </p>
@@ -189,9 +168,9 @@
         <div class="content w-full lg:w-3/4" id="hot">
             <div class="bg-white overflow-hidden w-full">
                 <div class="px-6 py-4">
-                    <ul>
+                    <ul class="text-black">
                         <li class="flex justify-between items-center py-2 flex-row pointer-events-none">
-                            <span class="">Espresso</span>
+                            <span class="text-black">Espresso</span>
                             <span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
                             <span>87 Kč</span>
                         </li>
@@ -237,7 +216,7 @@
         <div class="content hidden w-full lg:w-3/4" id="cold">
             <div class="bg-white rounded-lg overflow-hidden w-full">
                 <div class="px-6 py-4">
-                    <ul>
+                    <ul class="text-black">
                         <li class="flex justify-between items-center py-2 flex-row pointer-events-none">
                             <span class="flex">Matcha</span>
                             <span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
@@ -288,7 +267,7 @@
         <div class="content hidden w-full lg:w-3/4" id="dessert">
             <div class="bg-white rounded-lg overflow-hidden w-full">
                 <div class="px-6 py-4">
-                    <ul>
+                    <ul class="text-black">
                         <li class="flex justify-between items-center py-2 flex-row pointer-events-none">
                             <span class="flex">Dortík</span>
                             <span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
@@ -357,7 +336,7 @@
                             <span class="text-gray-700">4.8 / 5 <a
                                         href="https://www.google.com/search?sa=X&sca_esv=f65ab4fb82876b19&tbm=lcl&sxsrf=ACQVn09bppIefKvX-aynKazRh2tdbockrg:1713795426632&q=Rest+Cafe+Recenze&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxI2szQzsjQwNjczMza2NDU1Mjcx28DI-IpRMCi1uETBOTEtVSEoNTk1ryp1ESumGAC0yUOoQgAAAA&rldimm=6962903766339552746&hl=cs-CZ&ved=2ahUKEwj0v_y8gdaFAxWNh_0HHZrGB58Q9fQKegQIFxAF&biw=1920&bih=919&dpr=1#lkt=LocalPoiReviews"
                                         target="_blank" class="underline">(239 hodnocení)</a>
-					</span>
+                        </span>
                         </div>
                         <p class="text-gray-700"><span class="italic">"Skvělá kavárna s výbornou kávou (i horkou čokoládou) a naprosto vynikajícími dezerty"</span>
                             <br> <span class="font-bold">-Magdalena</span></p>
@@ -374,7 +353,7 @@
                             <span class="text-gray-700">4.5 / 5 <a
                                         href="https://www.facebook.com/search/top/?q=Rest%20Cafe%20Recenze&epa=SEARCH_BOX"
                                         target="_blank" class="underline">(123 hodnocení)</a>
-					</span>
+                        </span>
                         </div>
                         <p class="text-gray-700"><span class="italic">"Skvělé místo s přátelskou atmosférou a skvělým personálem"</span>
                             <br> <span class="font-bold">-Jan</span></p>
@@ -391,7 +370,7 @@
                             <span class="text-gray-700">4.5 / 5 <a
                                         href="https://www.facebook.com/search/top/?q=Rest%20Cafe%20Recenze&epa=SEARCH_BOX"
                                         target="_blank" class="underline">(123 hodnocení)</a>
-					</span>
+                        </span>
                         </div>
                         <p class="text-gray-700"><span class="italic">"Skvělé místo s přátelskou atmosférou a skvělým personálem"</span>
                             <br> <span class="font-bold">-Jan</span></p>
@@ -408,7 +387,7 @@
                             <span class="text-gray-700">4.5 / 5 <a
                                         href="https://www.facebook.com/search/top/?q=Rest%20Cafe%20Recenze&epa=SEARCH_BOX"
                                         target="_blank" class="underline">(123 hodnocení)</a>
-					</span>
+                        </span>
                         </div>
                         <p class="text-gray-700"><span class="italic">"Nejlepší káva od asijského prince"</span>
                             <br> <span class="font-bold">-Jan</span></p>
@@ -425,7 +404,7 @@
                             <span class="text-gray-700">4.5 / 5 <a
                                         href="https://www.facebook.com/search/top/?q=Rest%20Cafe%20Recenze&epa=SEARCH_BOX"
                                         target="_blank" class="underline">(123 hodnocení)</a>
-					</span>
+                        </span>
                         </div>
                         <p class="text-gray-700"><span class="italic">"Peckovní kávička "</span>
                             <br> <span class="font-bold">-Jan</span></p>
@@ -438,8 +417,8 @@
 
 <section class="bg-white mt-10 md:mt-14 lg:mt-20" id="location">
     <div class="max-w-7xl mx-auto px-4">
-        <h2 class="text-3xl font-bold mb-4 text-center">Kde nás najdete?</h2>
-        <div class="flex flex-col items-center mb-8 mt-[1rem]">
+        <h2 class="text-3xl text-black font-bold mb-4 text-center">Kde nás najdete?</h2>
+        <div class="flex flex-col text-black items-center mb-8 mt-[1rem]">
             <p class="font-bold">Rest Café</p>
             <p class="">Jindřišská 2, Nové Město</p>
             <p class="">110 00, Praha</p>
@@ -488,7 +467,7 @@
 
                     </a>
                     <a href="https://www.instagram.com/restcafe.cz/"
-                       class="text-gray-500 text-white transition-colors duration-300 hover:text-deep-purple-accent-400"
+                       class="text-white transition-colors duration-300 hover:text-deep-purple-accent-400"
                        target="_blank">
                         <svg viewBox="0 0 30 30" fill="currentColor" class="h-6">
                             <circle cx="15" cy="15" r="4"></circle>
@@ -498,7 +477,7 @@
                         </svg>
                     </a>
                     <a href="https://www.facebook.com/restcafecz/"
-                       class="text-gray-500 text-white transition-colors duration-300 hover:text-deep-purple-accent-400"
+                       class="text-white transition-colors duration-300 hover:text-deep-purple-accent-400"
                        target="_blank">
                         <svg viewBox="0 0 24 24" fill="currentColor" class="h-5">
                             <path
@@ -514,15 +493,15 @@
                 © Copyright 2024 Pham Kučera Productions.
             </p>
             <!-- <ul class="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
-              <li>
+            <li>
                 <a href="/" class="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">F.A.Q</a>
-              </li>
-              <li>
+            </li>
+            <li>
                 <a href="/" class="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">Privacy Policy</a>
-              </li>
-              <li>
+            </li>
+            <li>
                 <a href="/" class="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">Terms &amp; Conditions</a>
-              </li>
+            </li>
             </ul> -->
         </div>
     </div>
@@ -530,24 +509,24 @@
 
 
 <!-- <footer class="bg-white rounded-lg shadow m-4 dark:bg-gray-800">
-	<div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-      <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="/" class="hover:underline">Jan Kučera productions</a>. All Rights Reserved.
+    <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="/" class="hover:underline">Jan Kučera productions</a>. All Rights Reserved.
     </span>
-		<ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
-			<li>
-				<a href="#" class="hover:underline me-4 md:me-6">Michal</a>
-			</li>
-			<li>
-				<a href="#" class="hover:underline me-4 md:me-6">Pham</a>
-			</li>
-			<li>
-				<a href="#" class="hover:underline me-4 md:me-6">Platinum1</a>
-			</li>
-			<li>
-				<a href="#" class="hover:underline">Peaker</a>
-			</li>
-		</ul>
-	</div>
+        <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+            <li>
+                <a href="#" class="hover:underline me-4 md:me-6">Michal</a>
+            </li>
+            <li>
+                <a href="#" class="hover:underline me-4 md:me-6">Pham</a>
+            </li>
+            <li>
+                <a href="#" class="hover:underline me-4 md:me-6">Platinum1</a>
+            </li>
+            <li>
+                <a href="#" class="hover:underline">Peaker</a>
+            </li>
+        </ul>
+    </div>
 </footer> -->
 <button id="scrollTopBtn" class="hidden fixed bottom-4 right-4 bg-gray-800 text-white px-2 py-2 rounded-lg shadow-md">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
