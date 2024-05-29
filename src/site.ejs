@@ -6,44 +6,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rest Café</title>
     <link rel="stylesheet" href="./output.css">
-    <script src="https://unpkg.com/htmx.org@1.9.12"
-            integrity="sha384-ujb1lZYygJmzgSwoxRggbCHcjc0rB2XoQrxeTUQyRjrOnlCoYta87iKBWq3EsdM2"
-            crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.7/dist/countUp.umd.js"></script>
 
     <link href="output.css" rel="stylesheet" />
 </head>
 <body class="bg-white">
-<section class="bg-cover bg-center flex flex-col justify-center pt-9 min-h-screen md:w-full relative" id="navb" style="background-image: url(./restpobocka.jpg)">
+<section class="bg-cover bg-center flex flex-col justify-center pt-9 min-h-screen md:w-full relative" style="background-image: url(./restpobocka.jpg)">
     <header id="header" class="bg-transparent transition duration-300 absolute md:fixed w-full z-20 top-0 start-0">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-6 px-8">
+        <nav class="relative container px-4 py-8 flex justify-between items-center">
             <div class="max-md:z-10">
                 <a href="/" class="flex items-center">
                     <img src="./restlogo.png" class="h-16" alt="restcafe logo">
                 </a>
             </div>
-            <div class="flex md:order-2 md:hidden max-md:z-10">
-                <button id="burger-button" data-collapse-toggle="navbar-sticky" type="button"
-                        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-                        aria-controls="navbar-sticky" aria-expanded="false">
-                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+            <div class="lg:hidden">
+                <button class="navbar-burger flex items-center text-blue-600 p-3">
+                    <svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <title>Mobile menu</title>
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
                     </svg>
                 </button>
             </div>
-            <div id="navbar-sticky" class="hidden items-center justify-between w-full md:flex md:w-auto md:order-1 max-md:fixed max-md:inset-0 max-md:pt-[112px] max-md:bg-white">
-                <ul id="list-items-burger" class="flex flex-col px-6 md:p-0 mt-4 font-medium rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0">
-                    <li>
-                        <a href="#about-us" class="block py-2 text-black md:text-white px-3 rounded text-xl md:hover:bg-transparent hover:text-red-700 md:p-0 menu-button">O nás</a>
-                    </li>
-                    <li>
-                        <a href="#nabidka-menu" class="block py-2 text-black md:text-white px-3 rounded text-xl md:hover:bg-transparent hover:text-red-700 md:p-0 menu-button">Nabídka</a>
-                    </li>
-                    <li>
-                        <a href="#location" class="block py-2 text-black md:text-white px-3 rounded text-xl md:hover:bg-transparent hover:text-red-700 md:p-0 menu-button">Kde nás najdete?</a>
-                    </li>
-                </ul>
-            </div>
+            <ul id="list-items-burger" class="hidden top-1/2 lg:flex lg:flex lg:items-center lg:space-x-6">
+                <li><a class="text-xl text-white hover:text-red-700" href="#about-us">O nás</a></li>
+                <li><a class="text-xl text-white hover:text-red-700" href="#nabidka-menu">Nabídka</a></li>
+                <li><a class="text-xl text-white hover:text-red-700" href="#location">Kde nás najdete?</a></li>
+            </ul>
+        </nav>
+        <div class="navbar-menu relative z-50 hidden">
+            <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+            <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+                <div class="flex items-center mb-8">
+                    <a class="mr-auto text-3xl font-bold leading-none" href="#">
+                        <img src="./restlogo.png" class="h-16" alt="restcafe logo">
+                    </a>
+                    <button class="navbar-close">
+                        <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div id="navbar-sticky">
+                    <ul id="list-items-burger">
+                        <li class="mb-1">
+                            <a class="block py-3 text-xl text-black hover:text-red-700" href="#about-us">O nás</a>
+                        </li>
+                        <li class="mb-1">
+                            <a class="block py-3 text-xl text-black hover:text-red-700" href="#nabidka-menu">Nabídka</a>
+                        </li>
+                        <li class="mb-1">
+                            <a class="block py-3 text-xl text-black hover:text-red-700" href="#location">Kde nás najdete?</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
         </div>
     </header>
     <div class="absolute inset-0 bg-black opacity-50"></div>
@@ -492,42 +507,9 @@
             <p class="text-sm text-white">
                 © Copyright 2024 Pham Kučera Productions.
             </p>
-            <!-- <ul class="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
-            <li>
-                <a href="/" class="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">F.A.Q</a>
-            </li>
-            <li>
-                <a href="/" class="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">Privacy Policy</a>
-            </li>
-            <li>
-                <a href="/" class="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">Terms &amp; Conditions</a>
-            </li>
-            </ul> -->
         </div>
     </div>
 </footer>
-
-
-<!-- <footer class="bg-white rounded-lg shadow m-4 dark:bg-gray-800">
-    <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="/" class="hover:underline">Jan Kučera productions</a>. All Rights Reserved.
-    </span>
-        <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
-            <li>
-                <a href="#" class="hover:underline me-4 md:me-6">Michal</a>
-            </li>
-            <li>
-                <a href="#" class="hover:underline me-4 md:me-6">Pham</a>
-            </li>
-            <li>
-                <a href="#" class="hover:underline me-4 md:me-6">Platinum1</a>
-            </li>
-            <li>
-                <a href="#" class="hover:underline">Peaker</a>
-            </li>
-        </ul>
-    </div>
-</footer> -->
 <button id="scrollTopBtn" class="hidden fixed bottom-4 right-4 bg-gray-800 text-white px-2 py-2 rounded-lg shadow-md">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
@@ -535,7 +517,6 @@
 </button>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 <script src="script.js" type="module"></script>
 </body>
 </html>

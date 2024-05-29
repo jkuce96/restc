@@ -19,81 +19,69 @@ window.addEventListener('scroll', function() {
     }
 });
 
-
-function aboutZoom() {
-  // list tlačítek
-  const menuButtons = document.querySelectorAll("#list-items-burger li a");
-
-  window.addEventListener("scroll", function() {
-      let currentScroll = window.scrollY;
-    
-      document.querySelectorAll("section").forEach(section => {
-          let sectionTop = section.offsetTop;
-          let sectionBottom = section.offsetTop + section.offsetHeight;
-
-          if (currentScroll >= sectionTop && currentScroll < sectionBottom) {
-
-            let targetId = section.id;
-              menuButtons.forEach(button => {
-                  if (button.getAttribute("href").substring(1) === targetId) {
-                      menuButtons.forEach(btn => {
-                          btn.classList.remove("text-red-700");
-                          btn.classList.add("text-gray-900");
-                      });
-                      button.classList.remove("text-gray-900");
-                      button.classList.add("text-red-700");
-                  }
-              });
-          }
-      });
-  });
-
-  menuButtons.forEach(button => {
-      button.addEventListener("click", function(e) {
-          e.preventDefault();
-
-          menuButtons.forEach(btn => {
-              btn.classList.remove("text-red-700");
-              btn.classList.add("text-gray-900");
-          });
-
-          button.classList.remove("text-gray-900");
-          button.classList.add("text-red-700");
-
-          let targetId = button.getAttribute("href").substring(1);
-          let target = document.getElementById(targetId);
-          let targetPosition = target.offsetTop - 130;
-          window.scrollTo({
-              top: targetPosition,
-              behavior: 'smooth'
-          });
-      });
-  });
-}
-
-// Call the aboutZoom function to initialize it
-aboutZoom();
-
 document.addEventListener("DOMContentLoaded", function() {
-    const burgerButton = document.getElementById('burger-button');
-    const burgerMenu = document.getElementById('navbar-sticky');
-    const menuLinks = burgerMenu.querySelectorAll('a');
+    const menuButtons = document.querySelectorAll("#list-items-burger li a");
+    const getOffset = () => window.innerWidth <= 768 ? 60 : 160;
 
-    burgerButton.addEventListener('click', function () {
-        const isMenuOpen = burgerMenu.classList.toggle('hidden');
-        document.body.classList.toggle('overflow-hidden', !isMenuOpen);
-    });
+    menuButtons.forEach(button => {
+        button.addEventListener("click", function(e) {
+            e.preventDefault();
 
-    menuLinks.forEach(link => {
-        link.addEventListener('click', function () {
-            burgerMenu.classList.add('hidden');
-            document.body.classList.remove('overflow-hidden');
+            let targetId = button.getAttribute("href").substring(1);
+            let target = document.getElementById(targetId);
+            let targetPosition = target.offsetTop - getOffset();
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
         });
     });
 
 
-    const labels = document.querySelectorAll("label[data-content]");
+    const burgerMenu = document.querySelector('.navbar-menu');
+    const burgerMenuLinks = document.querySelectorAll('#list-items-burger a');
 
+    burgerMenuLinks.forEach(link => {
+        link.addEventListener('click', () => burgerMenu.classList.add('hidden'));
+    });
+
+    const burger = document.querySelectorAll('.navbar-burger');
+    const menu = document.querySelectorAll('.navbar-menu');
+
+    if (burger.length && menu.length) {
+        for (var i = 0; i < burger.length; i++) {
+            burger[i].addEventListener('click', function() {
+                for (var j = 0; j < menu.length; j++) {
+                    menu[j].classList.toggle('hidden');
+                }
+            });
+        }
+    }
+
+    const close = document.querySelectorAll('.navbar-close');
+    const backdrop = document.querySelectorAll('.navbar-backdrop');
+
+    if (close.length) {
+        for (var i = 0; i < close.length; i++) {
+            close[i].addEventListener('click', function() {
+                for (var j = 0; j < menu.length; j++) {
+                    menu[j].classList.toggle('hidden');
+                }
+            });
+        }
+    }
+
+    if (backdrop.length) {
+        for (var i = 0; i < backdrop.length; i++) {
+            backdrop[i].addEventListener('click', function() {
+                for (var j = 0; j < menu.length; j++) {
+                    menu[j].classList.toggle('hidden');
+                }
+            });
+        }
+    }
+
+    const labels = document.querySelectorAll("label[data-content]");
     labels.forEach(function(label) {
         label.addEventListener("click", function() {
             const contentId = this.getAttribute("data-content");
@@ -145,10 +133,6 @@ window.addEventListener('scroll', () => {
     scrollTopBtn.classList.add('hidden');
   }
 });
-
-//ig 
-
-
 
 // Event listener to scroll to the top when the button is clicked
 scrollTopBtn.addEventListener('click', scrollToTop);
