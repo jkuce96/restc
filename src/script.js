@@ -4,6 +4,30 @@ window.addEventListener('scroll', function() {
         var header = document.getElementById('header');
         var links = header.querySelectorAll('a');
         if (window.scrollY > 50) {
+            sessionStorage.setItem('scrollState', 'scrolled')
+            header.classList.add('bg-white', 'shadow-lg');
+            links.forEach(link => {
+                link.classList.remove('md:text-white');
+                link.classList.add('md:text-black');
+            })
+        } else {
+            sessionStorage.setItem('scrollState', 'notScrolled')
+            header.classList.remove('bg-white', 'shadow-lg');
+            links.forEach(link => {
+                link.classList.remove('md:text-black');
+                link.classList.add('md:text-white');
+            })
+        }
+    }
+});
+
+window.addEventListener('load', function () {
+    if (window.innerWidth > 768) {
+        var header = document.getElementById('header');
+        var links = header.querySelectorAll('a');
+        var scrollState = sessionStorage.getItem('scrollState');
+
+        if (scrollState === 'scrolled' && window.scrollY > 50) {
             header.classList.add('bg-white', 'shadow-lg');
             links.forEach(link => {
                 link.classList.remove('md:text-white');
@@ -17,7 +41,7 @@ window.addEventListener('scroll', function() {
             })
         }
     }
-});
+})
 
 document.addEventListener("DOMContentLoaded", function() {
     const menuButtons = document.querySelectorAll("#list-items-burger li a");
