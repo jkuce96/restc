@@ -1,3 +1,20 @@
+let isClickScroll = false;
+
+document.querySelectorAll('.custom-underline').forEach(link => {
+    link.addEventListener('click', function() {
+        isClickScroll = true;
+        setTimeout(() => isClickScroll = false, 1000);
+    });
+});
+
+window.addEventListener('scroll', function() {
+    if (!isClickScroll) {
+        const focusedElement = document.activeElement;
+        if (focusedElement && focusedElement.classList.contains('custom-underline')) {
+            focusedElement.blur();
+        }
+    }
+});
 
 window.addEventListener('scroll', function() {
     if (window.innerWidth > 768) {

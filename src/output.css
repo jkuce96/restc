@@ -2321,6 +2321,14 @@ html {
     margin-bottom: 0px;
   }
 
+  .md\:flex {
+    display: flex;
+  }
+
+  .md\:hidden {
+    display: none;
+  }
+
   .md\:h-full {
     height: 100%;
   }
@@ -2347,6 +2355,12 @@ html {
 
   .md\:justify-between {
     justify-content: space-between;
+  }
+
+  .md\:space-x-6 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1.5rem * var(--tw-space-x-reverse));
+    margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .md\:px-0 {
