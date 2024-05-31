@@ -5,8 +5,11 @@ module.exports = {
 ],
   theme: {
     extend: {
+      fontFamily: {
+        custom: ["Coffee, sans-serif"]
+      },
       width: {
-        '127': '32rem',
+        '127': '34rem',
       },
       colors: {
         "bookmark-purple": "#5267DF",
@@ -24,9 +27,6 @@ module.exports = {
       backgroundImage: theme => ({
         "custom-gradient": "linear-gradient(to bottom right, #000000, #656565"
       }),
-    },
-    fontFamily: {
-      Poppins: ["Poppins, sans-serif"]
     },
     container: {
       center: true,

@@ -151,14 +151,21 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-// Get the scroll to top button element
-const scrollTopBtn = document.getElementById('scrollTopBtn');
 
-// Function to scroll to the top of the page when the button is clicked
+const scrollTopBtn = document.getElementById('scrollTopBtn');
+const scrollTopBtnImgTop = document.getElementById('scrollTopBtnImgTop');
+const scrollTopBtnImgBottom = document.getElementById('scrollTopBtnImgBottom');
+
+const buttons = [scrollTopBtn, scrollTopBtnImgTop, scrollTopBtnImgBottom];
+
+buttons.forEach(button => {
+    button.addEventListener('click', scrollToTop)
+})
+
 function scrollToTop() {
   window.scrollTo({
     top: 0,
-    behavior: 'smooth' // Smooth scrolling animation
+    behavior: 'smooth'
   });
 }
 
@@ -174,6 +181,3 @@ window.addEventListener('scroll', () => {
     scrollTopBtn.classList.add('hidden');
   }
 });
-
-// Event listener to scroll to the top when the button is clicked
-scrollTopBtn.addEventListener('click', scrollToTop);

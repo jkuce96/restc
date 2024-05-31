@@ -44,14 +44,14 @@
         }
     </style>
 </head>
-<body class="bg-white">
+<body class="font-custom bg-white">
 <section class="bg-cover bg-center flex flex-col justify-center pt-9 min-h-screen md:w-full relative" style="background-image: url(image/restpobocka.jpg)">
     <header id="header" class="bg-transparent transition duration-300 absolute md:fixed w-full z-20 top-0 start-0">
         <nav class="relative container px-4 py-8 flex justify-between items-center">
             <div class="max-md:z-10">
-                <a href="/" class="flex items-center">
+                <button id="scrollTopBtnImgTop" class="flex items-center">
                     <img src="./restlogo.png" class="h-16" alt="restcafe logo">
-                </a>
+                </button>
             </div>
             <div class="md:hidden">
                 <button class="navbar-burger flex items-center text-blue-600 p-3">
@@ -98,7 +98,7 @@
                         <img src="./restlogo.png" class="h-16" alt="restcafe logo">
                     </a>
                     <button class="navbar-close">
-                        <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg class="h-6 w-6 text-gradient-red-dark cursor-pointer hover:text-red-500" xmlns="http://www.w3.org/2000/svg" fill="#450a0a" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                         </svg>
                     </button>
@@ -397,7 +397,7 @@
 </div>
 
 
-<section class="bg-gradient-to-r from-red-800 to-red-600 pt-16 pb-7 mt-10 md:mt-14 container lg:mt-20 relative overflow-hidden" id="reviews">
+<section class="bg-gradient-to-r from-red-800 to-gradient-red-dark pt-16 pb-7 mt-10 md:mt-14 container lg:mt-20 relative overflow-hidden" id="reviews">
     <div class="max-w-7xl mx-auto px-4">
         <h2 class="text-3xl font-bold mb-4 text-center text-white">Naše hodnocení</h2>
         <p class="text-lg text-white mb-8 text-center">Podívejte se, co o nás říkají naši zákazníci.</p>
@@ -508,13 +508,13 @@
     </div>
 </section>
 
-<footer class="bg-gradient-to-r from-red-800 to-red-600 mt-10 md:mt-14 lg:mt-20">
+<footer class="bg-gradient-to-r from-red-800 to-gradient-red-dark mt-10 md:mt-14 lg:mt-20">
     <div class="px-4 pt-16 mx-auto w-11/12 md:max-w-full lg:max-w-screen-xl lg:px-8">
         <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-8 ">
             <div class="sm:col-span-1 mb-8 md:mb-0">
-                <a href="/" aria-label="Go home" title="Company" class="inline-flex items-center">
+                <button id="scrollTopBtnImgBottom"  aria-label="Go home" title="Company" class="inline-flex items-center">
                     <img class="h-32" src="./restlogo.png" alt="">
-                </a>
+                </button>
             </div>
             <div class="space-y-2 text-md flex flex-col">
                 <p class="text-base font-bold tracking-wide text-white">Kontakt</p>
