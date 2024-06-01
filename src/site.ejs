@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="svg/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rest Café</title>
     <link rel="stylesheet" href="./output.css">
@@ -13,6 +13,7 @@
 		.custom-underline {
 			position: relative;
 		}
+
 		.custom-underline::after {
 			content: '';
 			position: absolute;
@@ -25,10 +26,12 @@
 			transition: transform 0.3s ease-in-out;
 			transform-origin: center;
 		}
+
 		.custom-underline:hover::after,
 		.custom-underline:focus::after {
 			transform: scaleX(1);
 		}
+
 		.custom-underline:hover,
 		.custom-underline:focus {
 			color: #CF2424;
@@ -39,18 +42,21 @@
 			color: #FFF;
 		}
 
-        svg:hover {
-            fill: #C9C9C9;
-        }
+		svg:hover {
+			fill: #C9C9C9;
+			transform: scale(1.1);
+		}
+
     </style>
 </head>
 <body class="font-custom bg-white">
-<section class="bg-cover bg-center flex flex-col justify-center pt-9 min-h-screen md:w-full relative" style="background-image: url(image/restpobocka.jpg)">
+<section class="bg-cover bg-center flex flex-col justify-center pt-9 min-h-screen md:w-full relative"
+         style="background-image: url(image/restpobocka.jpg)">
     <header id="header" class="bg-transparent transition duration-300 absolute md:fixed w-full z-20 top-0 start-0">
         <nav class="relative container px-4 py-8 flex justify-between items-center">
             <div class="max-md:z-10">
                 <button id="scrollTopBtnImgTop" class="flex items-center">
-                    <img src="./restlogo.png" class="h-16" alt="restcafe logo">
+                    <img src="image/restlogo.png" class="h-16" alt="restcafe logo">
                 </button>
             </div>
             <div class="md:hidden">
@@ -63,11 +69,13 @@
             </div>
             <ul id="list-items-burger" class="hidden top-1/2 md:flex md:flex md:items-center md:space-x-6">
                 <li><a class="text-xl text-white hover:text-red-700 custom-underline" href="#about-us">O nás</a></li>
-                <li><a class="text-xl text-white hover:text-red-700 custom-underline" href="#nabidka-menu">Nabídka</a></li>
-                <li><a class="text-xl text-white hover:text-red-700 custom-underline" href="#location">Kde nás najdete</a></li>
+                <li><a class="text-xl text-white hover:text-red-700 custom-underline" href="#nabidka-menu">Nabídka</a>
+                </li>
+                <li><a class="text-xl text-white hover:text-red-700 custom-underline" href="#location">Kde nás
+                        najdete</a></li>
                 <li>
                     <a href="https://www.instagram.com/restcafe.cz/"
-                       class=""
+                       class="transition-transform"
                        target="_blank">
                         <svg viewBox="0 0 30 30" fill="#8F1628" class="h-10 transition-colors duration-300">
                             <circle cx="15" cy="15" r="4"></circle>
@@ -79,7 +87,7 @@
                 </li>
                 <li>
                     <a href="https://www.facebook.com/restcafecz/"
-                       class=""
+                       class="transition-transform"
                        target="_blank">
                         <svg viewBox="0 0 24 24" fill="#8F1628" class="h-8 transition-colors duration-300">
                             <path
@@ -95,11 +103,14 @@
             <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
                 <div class="flex items-center mb-8">
                     <a class="mr-auto text-3xl font-bold leading-none" href="#">
-                        <img src="./restlogo.png" class="h-16" alt="restcafe logo">
+                        <img src="image/restlogo.png" class="h-16" alt="restcafe logo">
                     </a>
                     <button class="navbar-close">
-                        <svg class="h-6 w-6 text-gradient-red-dark cursor-pointer hover:text-red-500" xmlns="http://www.w3.org/2000/svg" fill="#450a0a" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        <svg class="h-6 w-6 text-gradient-red-dark cursor-pointer hover:text-red-500"
+                             xmlns="http://www.w3.org/2000/svg" fill="#450a0a" viewBox="0 0 24 24"
+                             stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M6 18L18 6M6 6l12 12"></path>
                         </svg>
                     </button>
                 </div>
@@ -112,7 +123,8 @@
                             <a class="block py-3 text-xl text-black hover:text-red-700" href="#nabidka-menu">Nabídka</a>
                         </li>
                         <li class="mb-1">
-                            <a class="block py-3 text-xl text-black hover:text-red-700" href="#location">Kde nás najdete?</a>
+                            <a class="block py-3 text-xl text-black hover:text-red-700" href="#location">Kde nás
+                                najdete?</a>
                         </li>
                     </ul>
                 </div>
@@ -141,9 +153,11 @@
     </header>
     <div class="absolute inset-0 bg-black opacity-50"></div>
     <div class="container relative items-center flex flex-col justify-center py-12 sm:pt-20">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-center text-white z-10">Welcome to Rest Caaafé</h1>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-center text-white z-10">Welcome to Rest Cafe</h1>
         <p class="text-lg md:text-xl lg:text-2xl xl:text-3xl text-center mt-4 px-4 md:px-0 text-white z-10">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed euismod, nunc eget aliquet lacinia, mauris nunc tincidunt nunc, id tincidunt urna ligula id nunc. Sed euismod, nunc eget aliquet lacinia, mauris nunc tincidunt nunc, id tincidunt urna ligula id nunc.</p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed euismod, nunc eget aliquet
+            lacinia, mauris nunc tincidunt nunc, id tincidunt urna ligula id nunc. Sed euismod, nunc eget aliquet
+            lacinia, mauris nunc tincidunt nunc, id tincidunt urna ligula id nunc.</p>
     </div>
 </section>
 
@@ -151,7 +165,7 @@
     <!-- KDO JSME? -->
     <section class="py-2" id="about-us">
         <!-- HEADING -->
-        <div class="sm:w-3/4 lg:w-9/12 mx-auto px-2">
+        <div class=" sm:w-3/4 lg:w-9/12 mx-auto px-2">
             <h1 class="text-3xl text-center text-bookmark-blue">O Nás</h1>
             <p class="text-center text-sm lg:text-base text-black mt-4">
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque tincidunt scelerisque libero. Etiam
@@ -172,26 +186,28 @@
                     <h1 class="text-3xl text-bookmark-blue">Káva 1</h1>
                     <p class="text-sm lg:text-base text-black text-left my-4 w-10/12 sm:w-3/4 lg:w-full">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos dolorem earum quidem dolor
-                        necessitatibus modi ab sed illum? Beatae iste doloremque illo.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos dolorem earum quidem dolor
+                        necessitatibus modi ab sed illum? Beatae iste doloremque illo.Lorem ipsum dolor sit amet,
+                        consectetur adipisicing elit. Eos dolorem earum quidem dolor
                         necessitatibus modi ab sed illum? Beatae iste doloremque illo.
                     </p>
                 </div>
             </div>
-
         </div>
         <!--FEATURES - feature n2-->
         <div class="relative mt-20 lg:mt-24">
             <div class="container flex flex-col md:flex-row-reverse items-center justify-center">
                 <!-- obrázek-->
                 <div class="flex flex-1 justify-center z-10 mb-10 md:m-0 lg:mb-0">
-                    <img class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full lg:w-auto lg:h-[580px]" src="image/picture-2.jpg" alt="">
+                    <img class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full lg:w-auto lg:h-[580px]"
+                         src="image/picture-2.jpg" alt="">
                 </div>
                 <!-- CONTENT -->
                 <div class="flex flex-1 flex-col items-center lg:max-w-[480px]">
                     <h1 class="text-3xl text-bookmark-blue">Kávička</h1>
                     <p class="text-sm lg:text-base text-black my-4 text-left w-10/12 sm:w-3/4 lg:w-full">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis voluptates sit eum, distinctio
-                        illo dicta beatae dolore voluptatum accusamus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis voluptates sit eum, distinctio
+                        illo dicta beatae dolore voluptatum accusamus. Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Quis voluptates sit eum, distinctio
                         illo dicta beatae dolore voluptatum accusamus.
                     </p>
                 </div>
@@ -203,14 +219,16 @@
             <div class="container flex flex-col md:flex-row items-center justify-center">
                 <!-- obrázek-->
                 <div class="flex flex-grow-0 flex-shrink-0 basis-[60%] justify-center z-10 mb-10 md:m-0 lg:mb-0">
-                    <img class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full lg:w-auto lg:h-[580px]" src="image/picture-3.jpg" alt="">
+                    <img class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full lg:w-auto lg:h-[580px]"
+                         src="image/picture-3.jpg" alt="">
                 </div>
                 <!-- CONTENT -->
                 <div class="flex flex-grow-0 flex-shrink-0 basis-[40%] flex-col items-center lg:ml-8 lg:max-w-[380px]">
                     <h1 class="text-3xl text-bookmark-blue">Káva 3</h1>
                     <p class="text-sm lg:text-base text-black my-4 text-left w-10/12 sm:w-3/4 lg:w-full">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos dolorem earum quidem dolor
-                        necessitatibus modi ab sed illum? Beatae iste doloremque illo.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos dolorem earum quidem dolor
+                        necessitatibus modi ab sed illum? Beatae iste doloremque illo.Lorem ipsum dolor sit amet,
+                        consectetur adipisicing elit. Eos dolorem earum quidem dolor
                         necessitatibus modi ab sed illum? Beatae iste doloremque illo.
                     </p>
                 </div>
@@ -417,7 +435,9 @@
 </div>
 
 
-<section class="bg-gradient-to-r from-red-800 to-gradient-red-dark pt-16 pb-7 mt-10 md:mt-14 container lg:mt-20 relative overflow-hidden" id="reviews">
+<section
+        class="bg-gradient-to-r from-red-800 to-gradient-red-dark pt-16 pb-7 mt-10 md:mt-14 container lg:mt-20 relative overflow-hidden"
+        id="reviews">
     <div class="max-w-7xl mx-auto px-4">
         <h2 class="text-3xl font-bold mb-4 text-center text-white">Naše hodnocení</h2>
         <p class="text-lg text-white mb-8 text-center">Podívejte se, co o nás říkají naši zákazníci.</p>
@@ -523,7 +543,7 @@
         </div>
         <a href="https://www.google.com/maps/place/Rest+Cafe/@50.0827484,14.4241915,17z/data=!3m1!4b1!4m6!3m5!1s0x470b954ba8aaa593:0x60a134159de605ea!8m2!3d50.082745!4d14.4267664!16s%2Fg%2F11r4ryjcq8?entry=ttu"
            target="_blank">
-            <img class="container " src="./restmap2.svg" alt="">
+            <img class="container " src="svg/restmap.svg" alt="">
         </a>
     </div>
 </section>
@@ -532,8 +552,9 @@
     <div class="px-4 pt-16 mx-auto w-11/12 md:max-w-full lg:max-w-screen-xl lg:px-8">
         <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-8 ">
             <div class="sm:col-span-1 mb-8 md:mb-0">
-                <button id="scrollTopBtnImgBottom"  aria-label="Go home" title="Company" class="inline-flex items-center">
-                    <img class="h-32" src="./restlogo.png" alt="">
+                <button id="scrollTopBtnImgBottom" aria-label="Go home" title="Company"
+                        class="inline-flex items-center">
+                    <img class="h-32" src="image/restlogo.png" alt="">
                 </button>
             </div>
             <div class="space-y-2 text-md flex flex-col">
@@ -583,9 +604,20 @@
         <div class="flex flex-col-reverse justify-between pt-5 pb-10 border-t lg:flex-row"></div>
     </div>
 </footer>
-<button id="scrollTopBtn" class="hidden fixed bottom-4 right-4 bg-gray-800 text-white px-2 py-2 rounded-lg shadow-md">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+<button id="scrollTopBtn" class="hidden fixed bottom-4 right-4 text-white px-2 py-2 z-50">
+    <svg class="transition-transform" fill="#FFF" height="65px" width="65px" version="1.1" xmlns="http://www.w3.org/2000/svg"
+         viewBox="-47 -47 564.00 564.00" enable-background="new 0 0 470 470"
+         stroke="#FFF" stroke-width="0.0047">
+        <g id="SVGRepo_bgCarrier" stroke-width="0">
+            <rect x="-47" y="-47" width="564.00" height="564.00" rx="282" fill="#8F1628" strokewidth="0"/>
+        </g>
+        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+        <g id="SVGRepo_iconCarrier">
+            <g>
+                <path d="m257.044,354.256c13.729,0 25.517-4.526 34.088-13.086 11.183-11.206 15.419-27.645 11.976-46.348-3.259-17.702-13.119-35.517-27.766-50.163-18.106-18.106-41.428-28.916-62.386-28.916-13.74,0-25.534,4.531-34.108,13.105-11.155,11.156-15.4,27.609-11.955,46.33 3.259,17.702 13.12,35.517 27.766,50.163 18.106,18.106 41.428,28.915 62.385,28.915zm-72.141-108.747l19.542,19.542c1.465,1.465 3.384,2.197 5.304,2.197 1.919,0 3.839-0.732 5.304-2.197 2.929-2.929 2.929-7.678 0-10.606l-19.547-19.547c4.898-2.734 10.809-4.154 17.451-4.154 17.067,0 36.424,9.167 51.778,24.522 12.519,12.518 20.907,27.531 23.621,42.272 1.928,10.472 0.76,19.771-3.257,26.953l-48.833-48.833c-2.929-2.929-7.677-2.93-10.607,0-2.929,2.929-2.929,7.678 0,10.606l48.838,48.838c-4.898,2.734-10.81,4.154-17.452,4.154-17.067,0-36.424-9.167-51.778-24.522-12.519-12.518-20.907-27.53-23.62-42.272-1.929-10.471-0.762-19.771 3.256-26.953z"/>
+                <path d="M397.5,60h-24.145L359.776,5.681C358.941,2.342,355.941,0,352.5,0h-235c-3.441,0-6.441,2.342-7.276,5.681L96.645,60H72.5 c-4.143,0-7.5,3.358-7.5,7.5v40c0,4.142,3.357,7.5,7.5,7.5h8.107l13.156,155.685c0.331,3.913,3.608,6.869,7.465,6.869 c0.212,0,0.426-0.009,0.641-0.027c4.127-0.349,7.19-3.977,6.842-8.104L101.154,180h267.693L351.1,390H118.9l-7.663-90.685 c-0.35-4.128-3.984-7.202-8.105-6.842c-4.127,0.349-7.19,3.977-6.842,8.104l13.736,162.553c0.328,3.884,3.576,6.869,7.474,6.869 h235c3.897,0,7.146-2.985,7.474-6.869L389.393,115h8.107c4.143,0,7.5-3.358,7.5-7.5v-40C405,63.358,401.643,60,397.5,60z M124.393,455l-4.225-50h229.665l-4.225,50H124.393z M370.114,165H99.886l-4.225-50h278.678L370.114,165z M390,100h-7.631 C382.363,100,80,100,80,100V75h22.344c0.106,0.002,0.216,0.002,0.324,0H337.5c4.143,0,7.5-3.358,7.5-7.5s-3.357-7.5-7.5-7.5 H112.105l11.25-45h223.289l13.579,54.319C361.059,72.658,364.059,75,367.5,75H390V100z"/>
+            </g>
+        </g>
     </svg>
 </button>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
