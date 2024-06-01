@@ -14,9 +14,7 @@ window.addEventListener('scroll', function() {
             focusedElement.blur();
         }
     }
-});
 
-window.addEventListener('scroll', function() {
     if (window.innerWidth > 768) {
         var header = document.getElementById('header');
         var links = header.querySelectorAll('a');
