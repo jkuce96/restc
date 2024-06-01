@@ -58,6 +58,19 @@ window.addEventListener('load', function () {
             })
         }
     }
+
+    const hash = window.location.hash;
+    if (hash) {
+        const target = document.getElementById(hash.substring(1));
+        if (target) {
+            const getOffset = () => window.innerWidth <= 768 ? 60 : 160;
+            const targetPosition = target.offsetTop - getOffset();
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            })
+        }
+    }
 })
 
 document.addEventListener("DOMContentLoaded", function() {
