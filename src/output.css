@@ -1910,6 +1910,14 @@ html {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
 
+.bg-gradient-to-t {
+  background-image: linear-gradient(to top, var(--tw-gradient-stops));
+}
+
+.bg-gradient-to-b {
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+}
+
 .from-red-800 {
   --tw-gradient-from: #991b1b var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(153 27 27 / 0) var(--tw-gradient-to-position);
@@ -2033,11 +2041,6 @@ html {
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
-}
-
-.text-base {
-  font-size: 1rem;
-  line-height: 1.5rem;
 }
 
 .text-lg {

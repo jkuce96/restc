@@ -24,9 +24,6 @@ module.exports = {
       linearGradientColors: {
         "custom-gradient": ["#000000", "#656565"]
       },
-      backgroundImage: theme => ({
-        "custom-gradient": "linear-gradient(to bottom right, #000000, #656565"
-      }),
     },
     container: {
       center: true,
