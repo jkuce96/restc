@@ -23,7 +23,7 @@ app.get('/', async (req, res) => {
             const accessToken = "IGQWRNbndBNFk2R0VNWE1TSGJuVDVaVnFEd29pc1JjVEFNVTdkTjdXQlBiR0hLZAkJmWmQ5MHlDOFlBLXF1WG1UbTB1djhDNTI4dkwybmdyZA0p6R3ZAKbmU2MzQtU2t2LUFFRWdFbUNuZA0taMTFpaTh4NzFXTllnc3MZD";
             const apiUrl = `https://graph.instagram.com/v12.0/me/media?fields=id,caption,media_type,media_url,permalink,timestamp&access_token=${accessToken}`;
             const response = await axios.get(apiUrl);
-            const imageData = response.data.data;
+        //     const imageData = response.data.data;
             console.log(response)
     
             // Render site.ejs and pass imageData as a local variable
