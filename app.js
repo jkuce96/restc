@@ -30,7 +30,7 @@ app.get('/', async (req, res) => {
             res.render('site', { imageData });
         } catch (error) {
             console.error('Error fetching Instagram data:', error);
-            res.status(500).send('Error fetching Instagram data');
+            res.render('site', { imageData: [] });
         }
     });
 

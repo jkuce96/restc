@@ -539,24 +539,27 @@
     </div>
 </section>
 
-<section class="max-w-screen-xl mx-auto px-6">
-    <h1 class="text-3xl font-bold mb-4">Instagram Photos</h1>
-    
-    <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-auto">
-        <% imageData.filter(image => image.media_type !== 'VIDEO').slice(0, 8).forEach(image => { %>
-            <li class="relative group">
-                <div class="overflow-hidden rounded-lg shadow-lg">
-                    <a href="<%= image.permalink %>" target="_blank" class="block">
-                        <img src="<%= image.media_url %>" alt="<%= image.caption %>" class="w-full h-full transition duration-300 transform group-hover:scale-105">
-                        <div class="absolute top-0 left-0 w-full h-full bg-black opacity-0 group-hover:opacity-75 flex items-center justify-center text-white transition duration-300">
-                            <p class="text-center p-4"><%= image.caption %></p>
-                        </div>
-                    </a>
-                </div>
-            </li>
-        <% }); %>
-    </ul>
-</section>
+<% if (imageData && imageData.length > 0) { %>
+    <section class="max-w-screen-xl mx-auto px-6">
+        <h1 class="text-3xl font-bold mb-4">Instagram Photos</h1>
+        
+        <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-auto">
+            <% imageData.filter(image => image.media_type !== 'VIDEO').slice(0, 8).forEach(image => { %>
+                <li class="relative group">
+                    <div class="overflow-hidden rounded-lg shadow-lg">
+                        <a href="<%= image.permalink %>" target="_blank" class="block">
+                            <img src="<%= image.media_url %>" alt="<%= image.caption %>" class="w-full h-full transition duration-300 transform group-hover:scale-105">
+                            <div class="absolute top-0 left-0 w-full h-full bg-black opacity-0 group-hover:opacity-75 flex items-center justify-center text-white transition duration-300">
+                                <p class="text-center p-4"><%= image.caption %></p>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+            <% }); %>
+        </ul>
+    </section>
+<% } %>
+
 
 
 
