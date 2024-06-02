@@ -539,6 +539,28 @@
     </div>
 </section>
 
+<section class="max-w-screen-xl mx-auto px-6">
+    <h1 class="text-3xl font-bold mb-4">Instagram Photos</h1>
+    
+    <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-auto">
+        <% imageData.filter(image => image.media_type !== 'VIDEO').slice(0, 8).forEach(image => { %>
+            <li class="relative group">
+                <div class="overflow-hidden rounded-lg shadow-lg">
+                    <a href="<%= image.permalink %>" target="_blank" class="block">
+                        <img src="<%= image.media_url %>" alt="<%= image.caption %>" class="w-full h-full transition duration-300 transform group-hover:scale-105">
+                        <div class="absolute top-0 left-0 w-full h-full bg-black opacity-0 group-hover:opacity-75 flex items-center justify-center text-white transition duration-300">
+                            <p class="text-center p-4"><%= image.caption %></p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+        <% }); %>
+    </ul>
+</section>
+
+
+
+
 <section class="bg-white mt-10 md:mt-14 lg:mt-20" id="location">
     <div class="max-w-7xl mx-auto px-4">
         <h2 class="text-3xl text-black font-bold mb-4 text-center">Kde nás najdete</h2>
@@ -549,7 +571,7 @@
         </div>
         <a href="https://www.google.com/maps/place/Rest+Cafe/@50.0827484,14.4241915,17z/data=!3m1!4b1!4m6!3m5!1s0x470b954ba8aaa593:0x60a134159de605ea!8m2!3d50.082745!4d14.4267664!16s%2Fg%2F11r4ryjcq8?entry=ttu"
            target="_blank">
-            <img class="container " src="svg/restmap.svg" alt="">
+            <img class="container " src="svg/restmap3.svg" alt="">
         </a>
     </div>
 </section>
