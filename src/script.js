@@ -86,6 +86,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 top: targetPosition,
                 behavior: 'smooth'
             });
+            window.history.pushState(null, null, `#${targetId}`);
         });
     });
 

@@ -73,9 +73,9 @@
                 </button>
             </div>
             <ul id="list-items-burger" class="hidden top-1/2 ml-auto md:flex md:flex md:items-center md:space-x-6">
-                <li><a class="text-xl text-white hover:text-red-700 custom-underline" href="#about-us">O nás</a></li>
-                <li><a class="text-xl text-white hover:text-red-700 custom-underline" href="#nabidka-menu">Nabídka</a></li>
-                <li><a class="text-xl text-white hover:text-red-700 custom-underline" href="#location">Kde nás najdete</a></li>
+                <li><a class="text-xl text-white hover:text-red-700 custom-underline" href="#o-nas">O nás</a></li>
+                <li><a class="text-xl text-white hover:text-red-700 custom-underline" href="#menu">Nabídka</a></li>
+                <li><a class="text-xl text-white hover:text-red-700 custom-underline" href="#kde-nas-najdete">Kde nás najdete</a></li>
             </ul>
             <div class="flex items-center ml-4 gap-2 hidden md:flex">
                 <a href="https://www.instagram.com/restcafe.cz/"
@@ -118,13 +118,13 @@
                 <div id="navbar-sticky">
                     <ul id="list-items-burger">
                         <li class="mb-1">
-                            <a class="block py-3 text-xl text-black hover:text-red-700" href="#about-us">O nás</a>
+                            <a class="block py-3 text-xl text-black hover:text-red-700" href="#o-nas">O nás</a>
                         </li>
                         <li class="mb-1">
-                            <a class="block py-3 text-xl text-black hover:text-red-700" href="#nabidka-menu">Nabídka</a>
+                            <a class="block py-3 text-xl text-black hover:text-red-700" href="#menu">Nabídka</a>
                         </li>
                         <li class="mb-1">
-                            <a class="block py-3 text-xl text-black hover:text-red-700" href="#location">Kde nás
+                            <a class="block py-3 text-xl text-black hover:text-red-700" href="#kde-nas-najdete">Kde nás
                                 najdete?</a>
                         </li>
                     </ul>
@@ -163,7 +163,7 @@
 
 <div class="max-w-screen-xl mx-auto px-4 mt-10 md:mt-14 lg:mt-20 justify-center items-center">
     <!-- KDO JSME? -->
-    <section class="py-2" id="about-us">
+    <section class="py-2" id="o-nas">
         <!-- HEADING -->
         <div class=" sm:w-3/4 lg:w-9/12 mx-auto px-2">
             <h1 class="text-3xl text-center text-bookmark-blue">O Nás</h1>
@@ -241,7 +241,7 @@
 
 
 <div class="menu flex container mx-auto mt-10 md:mt-14 lg:mt-20">
-    <section class="items-center flex flex-col mx-auto w-full" id="nabidka-menu">
+    <section class="items-center flex flex-col mx-auto w-full" id="menu">
         <div
                 class="flex space-x-2 border-[3px] border-rose-800 rounded-xl select-none w-72 sm:w-127 h-12 sm:h-16 lg:h-16"
         >
@@ -553,7 +553,7 @@
 
 
 
-<section class="bg-white mt-10 md:mt-14 lg:mt-20" id="location">
+<section class="bg-white mt-10 md:mt-14 lg:mt-20" id="kde-nas-najdete">
     <div class="max-w-7xl mx-auto md:px-4">
         <h2 class="text-3xl text-black font-bold mb-4 text-center">Kde nás najdete</h2>
         <div class="flex flex-col text-black items-center mb-8 mt-[1rem]">
@@ -577,20 +577,38 @@
                     <img class="h-20 md:h-32" src="image/restlogo.png" alt="">
                 </button>
             </div>
-            <div class="space-y-2 text-md flex flex-col">
-                <p class="text-lg font-bold tracking-wide text-white">Kontakt</p>
+            <div class="space-y-2 text-md flex flex-col self-start">
+                <p class="text-lg font-bold tracking-wide text-white md:ml-10">Otevírací doba</p>
+                <div class="flex flex-col">
+                    <div class="flex items-center">
+                        <img class="hidden md:flex h-6 mr-4" src="svg/clock.svg" alt="">
+                        <p class="mr-1 text-white">PO-PÁ: 7:00h - 19:30h</p>
+                    </div>
+                    <div class="flex">
+                        <p class="mr-1 text-white md:ml-10">SO: 9:00h - 19:30h</p>
+                    </div>
+                    <div class="flex">
+                        <p class="mr-1 text-white md:ml-10">NE: 10:00h - 19:30h</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 md:mt-0 space-y-2 text-md flex flex-col">
+                <p class="text-lg font-bold tracking-wide text-white md:ml-10">Kontakt</p>
                 <div class="flex">
+                    <img class="hidden md:flex h-6 mr-4" src="svg/phone.svg" alt="">
                     <p class="mr-1 text-white">Phone:</p>
                     <a href="tel:123-456-789" aria-label="Our phone" title="Our phone"
                        class="text-white custom-underline custom-underline-footer">+420
                         123 456 789</a>
                 </div>
-                <div class="flex">
+                <div class="flex items-center">
+                    <img class="hidden md:flex h-5 mr-3" src="svg/email.svg" alt="">
                     <p class="mr-1 text-white">Email:</p>
                     <a href="mailto:info@restcafe.cz" aria-label="Our email" title="Our email"
                        class="text-white custom-underline custom-underline-footer">info@restcafe.cz</a>
                 </div>
                 <div class="flex">
+                    <img class="hidden md:flex h-6 mr-4" src="svg/location.svg" alt="">
                     <p class="mr-1 text-white">Adresa:</p>
                     <a href="https://www.google.com/maps/place/Rest+Cafe/@50.0827484,14.4241915,17z/data=!3m1!4b1!4m6!3m5!1s0x470b954ba8aaa593:0x60a134159de605ea!8m2!3d50.082745!4d14.4267664!16s%2Fg%2F11r4ryjcq8?entry=ttu"
                        target="_blank" rel="noopener noreferrer" aria-label="Our address" title="Our address"
@@ -598,7 +616,7 @@
                         Jindřišská 2, 110 00, Praha 1
                     </a>
                 </div>
-                <div class="flex items-center mt-1 space-x-3">
+                <div class="flex items-center mt-1 space-x-3 md:ml-9">
                     <a href="https://www.instagram.com/restcafe.cz/"
                        class=""
                        target="_blank">
