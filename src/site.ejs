@@ -54,7 +54,7 @@
 
     </style>
 </head>
-<body class="font-custom bg-white">
+<body class="font-custom bg-background">
 <section class="bg-cover bg-center flex flex-col justify-center pt-9 min-h-screen md:w-full relative"
          style="background-image: url(image/restpobocka.jpg)">
     <header id="header" class="bg-transparent transition duration-300 absolute md:fixed w-full z-20 top-0 start-0">
@@ -155,10 +155,7 @@
     </header>
     <div class="absolute inset-0 bg-black opacity-50"></div>
     <div class="container relative items-center flex flex-col justify-center py-12 sm:pt-20">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-center text-white z-10">Rest Cafe</h1>
-        <p class="text-lg md:text-xl lg:text-2xl xl:text-3xl text-center mt-4 px-4 md:px-0 text-white z-10">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-        </p>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl xl:text-9xl font-bold text-center text-white z-10">Rest Cafe</h1>
     </div>
 </section>
 
@@ -239,47 +236,30 @@
 
 <div class="menu flex container mx-auto mt-16 lg:mt-20">
     <section class="items-center flex flex-col mx-auto w-full" id="menu">
-        <div
-                class="flex space-x-2 border-[3px] border-rose-800 rounded-xl select-none w-72 sm:w-127 h-12 sm:h-16 lg:h-16"
-        >
-            <label data-content="hot" type="button"
-                   class="w-16 flex flex-grow items-center justify-center rounded-lg p-1 cursor-pointer"
-            >
-                <input
-                        type="radio"
-                        name="radio"
-                        value="html"
-                        class="peer hidden"
-                        checked=""
-                />
-                <span class="text-xs p-2.5 sm:text-base sm:py-4 sm:p-[52px] tracking-widest peer-checked:bg-gradient-to-r peer-checked:from-gradient-red-dark peer-checked:to-gradient-red-light peer-checked:text-white text-gray-700 rounded-lg transition duration-150 ease-in-out"
-                >Coffee</span
-                >
-            </label>
-
-            <label data-content="cold" type="button"
-                   class="w-16 min-w-28 flex flex-grow items-center justify-center rounded-lg p-1 cursor-pointer"
-            >
-                <input type="radio" name="radio" value="react" class="peer hidden" />
-                <span
-                        class="flex-none text-xs p-2.5 sm:text-base sm:py-4 tracking-widest peer-checked:bg-gradient-to-r peer-checked:from-gradient-red-dark peer-checked:to-gradient-red-light peer-checked:text-white text-gray-700 rounded-lg transition duration-150 ease-in-out"
-                >Cold Coffee</span
-                >
-            </label>
-
-            <label data-content="dessert" type="button"
-                   class="w-16 flex flex-grow items-center justify-center rounded-lg p-1 cursor-pointer"
-            >
-                <input type="radio" name="radio" value="vue" class="peer hidden" />
-                <span
-                        class="text-xs p-2.5 sm:text-base sm:py-4 sm:p-[46px] tracking-widest peer-checked:bg-gradient-to-r peer-checked:from-gradient-red-dark peer-checked:to-gradient-red-light peer-checked:text-white text-gray-700 rounded-lg transition duration-150 ease-in-out"
-                >Dessert</span
-                >
-            </label>
+        <div class="relative w-72 sm:w-127 md:w-137 h-12 sm:h-16 overflow-hidden">
+            <div class="flex space-x-2 overflow-auto sm:overflow-hidden select-none h-full">
+                <label data-content="coffee" type="button" class="w-16 flex flex-grow items-center justify-center rounded-lg p-1 cursor-pointer">
+                    <input type="radio" name="radio" value="html" class="peer hidden" checked="" />
+                    <span class="text-xs md:text-base font-bold p-2.5 sm:py-4 sm:p-[52px] tracking-widest peer-checked:bg-gradient-to-r peer-checked:from-gradient-red-dark peer-checked:to-gradient-red-light peer-checked:text-white text-gray-700 rounded-lg transition duration-150 ease-in-out">Káva</span>
+                </label>
+                <label data-content="hot" type="button" class="w-16 min-w-28 flex flex-grow items-center justify-center rounded-lg p-1 cursor-pointer">
+                    <input type="radio" name="radio" value="react" class="peer hidden"/>
+                    <span class="flex-none font-bold text-xs md:text-base p-2.5 sm:py-4 tracking-widest peer-checked:bg-gradient-to-r peer-checked:from-gradient-red-dark peer-checked:to-gradient-red-light peer-checked:text-white text-gray-700 rounded-lg transition duration-150 ease-in-out">Něco na zahřátí</span>
+                </label>
+                <label data-content="alternatives" type="button" class="w-16 min-w-28 flex flex-grow items-center justify-center rounded-lg p-1 cursor-pointer">
+                    <input type="radio" name="radio" value="react" class="peer hidden"/>
+                    <span class="flex-none font-bold text-xs md:text-base p-2.5 sm:py-4 tracking-widest peer-checked:bg-gradient-to-r peer-checked:from-gradient-red-dark peer-checked:to-gradient-red-light peer-checked:text-white text-gray-700 rounded-lg transition duration-150 ease-in-out">Alternativy</span>
+                </label>
+                <label data-content="season" type="button" class="w-16 min-w-28 flex flex-grow items-center justify-center rounded-lg p-1 cursor-pointer">
+                    <input type="radio" name="radio" value="react" class="peer hidden"/>
+                    <span class="flex-none font-bold text-xs md:text-base p-2.5 sm:py-4 tracking-widest peer-checked:bg-gradient-to-r peer-checked:from-gradient-red-dark peer-checked:to-gradient-red-light peer-checked:text-white text-gray-700 rounded-lg transition duration-150 ease-in-out">Sezonní nabídka</span>
+                </label>
+            </div>
+            <div class="absolute top-0 bottom-0 right-0 w-8 bg-gradient-to-l from-white pointer-events-none sm:hidden"></div>
         </div>
         <!-- hot -->
-        <div class="content w-full lg:w-3/4" id="hot">
-            <div class="bg-white overflow-hidden w-full">
+        <div class="content w-full lg:w-3/4" id="coffee">
+            <div class="overflow-hidden w-full">
                 <div class="px-6 py-4">
                     <ul class="text-black">
                         <li class="flex justify-between items-center py-2 flex-row pointer-events-none">
@@ -326,8 +306,8 @@
 
         </div>
         <!-- cold -->
-        <div class="content hidden w-full lg:w-3/4" id="cold">
-            <div class="bg-white rounded-lg overflow-hidden w-full">
+        <div class="content hidden w-full lg:w-3/4" id="hot">
+            <div class="rounded-lg overflow-hidden w-full">
                 <div class="px-6 py-4">
                     <ul class="text-black">
                         <li class="flex justify-between items-center py-2 flex-row pointer-events-none">
@@ -377,8 +357,8 @@
             </div>
         </div>
         <!-- desserts -->
-        <div class="content hidden w-full lg:w-3/4" id="dessert">
-            <div class="bg-white rounded-lg overflow-hidden w-full">
+        <div class="content hidden w-full lg:w-3/4" id="alternatives">
+            <div class="rounded-lg overflow-hidden w-full">
                 <div class="px-6 py-4">
                     <ul class="text-black">
                         <li class="flex justify-between items-center py-2 flex-row pointer-events-none">
@@ -428,12 +408,64 @@
             </div>
 
         </div>
+
+        <div class="content hidden w-full lg:w-3/4" id="season">
+            <div class="rounded-lg overflow-hidden w-full">
+                <div class="px-6 py-4">
+                    <ul class="text-black">
+                        <li class="flex justify-between items-center py-2 flex-row pointer-events-none">
+                            <span class="flex">GInger</span>
+                            <span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
+
+                            <span>97 Kč</span>
+                        </li>
+                        <li class="flex justify-between items-center py-2 flex-row pointer-events-none">
+                            <span class="flex">Quiche</span>
+                            <span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
+
+                            <span>87 Kč</span>
+                        </li>
+                        <li class="flex justify-between items-center py-2 flex-row pointer-events-none">
+                            <span class="flex">Latte</span>
+                            <span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
+
+                            <span>87 Kč</span>
+                        </li>
+                        <li class="flex justify-between items-center py-2 flex-row pointer-events-none">
+                            <span class="flex">Latte</span>
+                            <span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
+
+                            <span>87 Kč</span>
+                        </li>
+                        <li class="flex justify-between items-center py-2 flex-row pointer-events-none">
+                            <span class="flex">Latte</span>
+                            <span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
+
+                            <span>87 Kč</span>
+                        </li>
+                        <li class="flex justify-between items-center py-2 flex-row pointer-events-none">
+                            <span class="flex">Latte</span>
+                            <span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
+
+                            <span>87 Kč</span>
+                        </li>
+                        <li class="flex justify-between items-center py-2 flex-row pointer-events-none">
+                            <span class="flex">Latte</span>
+                            <span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
+
+                            <span>87 Kč</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
     </section>
 </div>
 
 
 <section
-        class="bg-gradient-to-b from-red-800 to-gradient-red-dark pt-16 pb-7 mt-16 container lg:mt-20 relative overflow-hidden"
+        class="bg-gradient-to-b from-gradient-red-light to-gradient-red-dark pt-16 pb-7 mt-16 container lg:mt-20 relative overflow-hidden"
         id="reviews">
     <div class="max-w-7xl mx-auto px-4">
         <h2 class="text-3xl font-bold mb-4 text-center text-white">Naše hodnocení</h2>
@@ -602,6 +634,7 @@
                 </div>
             </div>
         </div>
+        <p class="text-lg text-white my-8 text-center">Pokud Vám naše káva chutnala, budeme rádi za Vaší recenzi na Google.</p>
     </div>
 </section>
 
@@ -627,7 +660,7 @@
     </section>
 <% } %>
 
-<section class="bg-white mt-16 lg:mt-20" id="kde-nas-najdete">
+<section class="mt-16 lg:mt-20" id="kde-nas-najdete">
     <div class="max-w-7xl mx-auto md:px-4">
         <h2 class="text-3xl text-black font-bold mb-4 text-center">Kde nás najdete</h2>
         <div class="flex flex-col text-black items-center mb-8 mt-[1rem]">
@@ -642,7 +675,7 @@
     </div>
 </section>
 
-<footer class="bg-gradient-to-b from-red-800 to-gradient-red-dark mt-16 lg:mt-20">
+<footer class="bg-gradient-to-b from-gradient-red-light to-gradient-red-dark mt-16 lg:mt-20">
     <div class="px-4 pt-16 mx-auto w-11/12 md:max-w-full lg:max-w-screen-xl lg:px-8">
         <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-8 ">
             <div class="sm:col-span-1 mb-8 md:mb-0">
@@ -668,6 +701,13 @@
             </div>
             <div class="mt-8 md:mt-0 space-y-2 text-md flex flex-col">
                 <p class="text-lg font-bold tracking-wide text-white md:ml-10">Kontakt</p>
+                <div class="flex">
+                    <img class="hidden md:flex h-6 mr-4" src="svg/phone.svg" alt="">
+                    <p class="mr-1 text-white">Telefon:</p>
+                    <a href="tel:123-456-789" aria-label="Our phone" title="Our phone"
+                       class="text-white custom-underline custom-underline-footer">+420
+                        123 456 789</a>
+                </div>
                 <div class="flex">
                     <img class="hidden md:flex h-6 mr-4" src="svg/phone.svg" alt="">
                     <p class="mr-1 text-white">Telefon:</p>

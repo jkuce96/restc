@@ -9,7 +9,8 @@ module.exports = {
         custom: ["Coffee, sans-serif"]
       },
       width: {
-        '127': '34rem',
+        '127': '38rem',
+        '137': '48rem',
       },
       colors: {
         "bookmark-purple": "#5267DF",
@@ -18,8 +19,9 @@ module.exports = {
         "bookmark-grey": "#9194A2",
         "bookmark-white": "#f7f7f7",
         "custom-purple": "#E9D5FF",
-        "gradient-red-dark": "#450a0a",
-        "gradient-red-light": "#b91c1c",
+        "gradient-red-dark": "#1A5c12",
+        "gradient-red-light": "#95918F",
+        "background": "#F0E9D9",
       },
       linearGradientColors: {
         "custom-gradient": ["#000000", "#656565"]
