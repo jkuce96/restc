@@ -19,7 +19,7 @@ module.exports = {
         "bookmark-grey": "#9194A2",
         "bookmark-white": "#f7f7f7",
         "custom-purple": "#E9D5FF",
-        "gradient-red-dark": "#1A5c12",
+        "gradient-red-dark": "#585858",
         "gradient-red-light": "#95918F",
         "background": "#F0E9D9",
       },

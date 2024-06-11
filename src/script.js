@@ -20,14 +20,14 @@ window.addEventListener('scroll', function() {
         var links = header.querySelectorAll('a');
         if (window.scrollY > 50) {
             sessionStorage.setItem('scrollState', 'scrolled')
-            header.classList.add('bg-background', 'shadow-lg');
+            header.classList.add('bg-white', 'shadow-lg');
             links.forEach(link => {
                 link.classList.remove('md:text-white');
                 link.classList.add('md:text-black');
             })
         } else {
             sessionStorage.setItem('scrollState', 'notScrolled')
-            header.classList.remove('bg-background', 'shadow-lg');
+            header.classList.remove('bg-white', 'shadow-lg');
             links.forEach(link => {
                 link.classList.remove('md:text-black');
                 link.classList.add('md:text-white');
@@ -43,13 +43,13 @@ window.addEventListener('load', function () {
         var scrollState = sessionStorage.getItem('scrollState');
 
         if (scrollState === 'scrolled' && window.scrollY > 50) {
-            header.classList.add('bg-background', 'shadow-lg');
+            header.classList.add('bg-white', 'shadow-lg');
             links.forEach(link => {
                 link.classList.remove('md:text-white');
                 link.classList.add('md:text-black');
             })
         } else {
-            header.classList.remove('bg-background', 'shadow-lg');
+            header.classList.remove('bg-white', 'shadow-lg');
             links.forEach(link => {
                 link.classList.remove('md:text-black');
                 link.classList.add('md:text-white');
