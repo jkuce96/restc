@@ -43,13 +43,13 @@ window.addEventListener('load', function () {
         var scrollState = sessionStorage.getItem('scrollState');
 
         if (scrollState === 'scrolled' && window.scrollY > 50) {
-            header.classList.add('bg-white', 'shadow-lg');
+            header.classList.add('bg-background', 'shadow-lg');
             links.forEach(link => {
                 link.classList.remove('md:text-white');
                 link.classList.add('md:text-black');
             })
         } else {
-            header.classList.remove('bg-white', 'shadow-lg');
+            header.classList.remove('bg-background', 'shadow-lg');
             links.forEach(link => {
                 link.classList.remove('md:text-black');
                 link.classList.add('md:text-white');

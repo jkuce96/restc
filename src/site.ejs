@@ -57,7 +57,7 @@
 <body class="font-custom bg-background">
 <section class="bg-cover bg-center flex flex-col justify-center pt-9 min-h-screen md:w-full relative"
          style="background-image: url(image/restpobocka.jpg)">
-    <header id="header" class="bg-transparent transition duration-300 absolute md:fixed w-full z-20 top-0 start-0">
+    <header id="header" class="transition duration-300 absolute md:fixed w-full z-20 top-0 start-0">
         <nav class="relative container px-4 py-8 flex justify-between md:justify-start items-center">
             <div class="max-md:z-10">
                 <button id="scrollTopBtnImgTop" class="flex items-center">
@@ -102,7 +102,7 @@
         </nav>
         <div class="navbar-menu relative z-50 hidden">
             <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
-            <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+            <nav class="bg-background fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 border-r overflow-y-auto">
                 <div class="flex items-center mb-8">
                     <a class="mr-auto text-3xl font-bold leading-none" href="#">
                         <img src="image/restlogo.png" class="h-16" alt="restcafe logo">
@@ -159,34 +159,38 @@
     </div>
 </section>
 
-<div class="max-w-screen-xl mx-auto px-4 mt-16 lg:mt-20 justify-center items-center">
+<div class="max-w-screen-xl mx-auto mt-16 lg:mt-20 justify-center items-center">
     <!-- KDO JSME? -->
     <section class="py-2" id="o-nas">
         <!-- HEADING -->
-        <div class=" sm:w-3/4 lg:w-9/12 mx-auto px-2">
+        <div class=" sm:w-3/4 lg:w-4/5 mx-auto px-2">
             <h1 class="text-3xl text-center text-bookmark-blue">O nás</h1>
             <p class="text-center text-sm lg:text-base text-black mt-4">
-                Rest Cafe, na Václavském náměstí je jedinečným místem v srdci Prahy, které spojuje pohodlné posezení s
-                vynikající výběrovou kávou na mlynku od pražírny Fathers z Ostravy. Tato kavárna vyniká nejen svou
-                výbornou kávou, ale i svou příjemnou vnitřní atmosférou a přátelským mladým kolektivem, který vytváří
-                ideální prostředí pro setkání s přáteli, práci na počítači nebo prosté relaxaci.
+                Rest Cafe se rozjela před třemi lety a od té doby jsme prošli řadou výzev, zejména během karantény. S&nbsp;hrdostí
+                můžeme říci, že jsme tyto obtíže překonali a jsme připraveni pokračovat v poskytování skvělého
+                servisu. Jsme tu, abychom vám každý den přinášeli radost prostřednictvím našich výrobků a úsměvu na
+                tváři.
             </p>
         </div>
         <!--FEATURES - feature n1-->
         <div class="relative mt-20 lg:mt-24">
-            <div class="container flex flex-col md:flex-row items-center justify-center">
-                <!-- obrázek-->
-                <div class="flex flex-grow-0 flex-shrink-0 basis-[60%] justify-center z-10 mb-10 md:m-0 lg:mb-0">
-                    <img class="sm:w-3/4 sm:h-3/4 md:w-full md:h-full lg:w-auto lg:h-[580px]"
-                         src="image/picture-3.jpg" alt="">
-                </div>
+            <div class="container flex flex-col-reverse  md:flex-row-reverse items-center justify-center">
                 <!-- CONTENT -->
-                <div class="flex flex-grow-0 flex-shrink-0 basis-[40%] flex-col items-center lg:ml-8 lg:max-w-[380px]">
-                    <p class="text-sm lg:text-base text-black my-4 text-left sm:w-3/4 lg:w-full">
-                        Rest Cafe se rozjela před třemi lety a od té doby jsme prošli řadou výzev, zejména během karantény. S
-                        hrdostí můžeme říci, že jsme tyto obtíže překonali a jsme připraveni pokračovat v poskytování skvělého
-                        servisu. Jsme tu, abychom vám každý den přinášeli radost prostřednictvím našich výrobků a úsměvu na tváři.
+                <div class="flex flex-grow-0 flex-shrink-0 basis-[40%] flex-col items-center lg:max-w-[410px] md:m-0 lg:mb-0">
+                    <p class="text-sm lg:text-base text-black my-4 text-center md:text-left sm:w-3/4 lg:w-full">
+                        Rest Cafe, na Václavském náměstí je jedinečným místem v srdci Prahy, které spojuje pohodlné
+                        posezení s
+                        vynikající výběrovou kávou na mlynku od pražírny Fathers z Ostravy. Tato kavárna vyniká nejen
+                        svou
+                        výbornou kávou, ale i svou příjemnou vnitřní atmosférou a přátelským mladým kolektivem, který
+                        vytváří
+                        ideální prostředí pro setkání s přáteli, práci na počítači nebo prosté relaxaci.
                     </p>
+                </div>
+                <!-- obrázek-->
+                <div class="flex flex-grow-0 flex-shrink-0 basis-[60%] justify-center z-10 mb-10 md:mb-0">
+                    <img class="w-full sm:h-3/4 sm:w-4/5 md:h-full lg:w-auto lg:h-[580px] rounded-3xl"
+                         src="image/fathers.jpg" alt="">
                 </div>
             </div>
 
@@ -195,16 +199,18 @@
         <div class="relative mt-20 lg:mt-24">
             <div class="container flex flex-col md:flex-row-reverse items-center justify-center">
                 <!-- obrázek-->
-                <div class="flex flex-1 justify-center z-10 mb-10 md:m-0 lg:mb-0">
-                    <img class="sm:w-3/4 sm:h-3/4 md:w-full md:h-full lg:w-auto lg:h-[580px]"
-                         src="image/picture-2.jpg" alt="">
+                <div class="flex flex-1 flex-col justify-center items-center gap-4 z-10 mb-10 md:m-0 lg:mb-0">
+                    <img class="w-full sm:h-3/4 sm:w-4/5 md:h-full rounded-3xl"
+                         src="image/kava.jpg" alt="">
+                    <img class="w-full sm:h-3/4 sm:w-4/5 md:h-full rounded-3xl" src="image/soft.jpg" alt="">
                 </div>
                 <!-- CONTENT -->
                 <div class="flex flex-1 flex-col items-center lg:max-w-[480px]">
-                    <p class="text-sm lg:text-base text-black my-4 text-left sm:w-3/4 lg:w-full">
-                        U nás také najdete i široký výběr čerstvých dezertů některé i bez lepku, veganske, slaných
-                        quichů a bez konkurenčních koláčů. Vstřícný personál je vždy připraven vám pomoct s výběrem,
-                        nebo poradit s výběrem kávových specialit.
+                    <p class="text-sm lg:text-base text-black my-4 text-center md:text-left sm:w-3/4 lg:w-full">
+                        V naší kavárně se neustále snažíme vylepšovat sortiment dezertů a snažíme se přizpůsobovat
+                        požadavkům našich zákazníků. S příchodem každého ročního období můžete očekávat nejen sezónní
+                        kávové speciality, ale také nekávové nápoje, které obohatí naši nabídku. Přijďte a zjistěte, co
+                        jsme pro vás připravili.
                     </p>
                 </div>
             </div>
@@ -215,16 +221,18 @@
         <div class="relative mt-20 lg:mt-24">
             <div class="container flex flex-col md:flex-row items-center justify-center">
                 <!-- obrázek-->
-                <div class="flex flex-grow-0 flex-shrink-0 basis-[60%] justify-center z-10 mb-10 md:m-0 lg:mb-0">
-                    <img class="sm:w-3/4 sm:h-3/4 md:w-full md:h-full" src="image/picture-1.jpg" alt="">
+                <div class="flex flex-col md:flex-row flex-grow-0 flex-shrink-0 basis-[60%] md:relative justify-center items-center gap-4 z-10 mb-10 md:m-0 lg:mb-0">
+                    <img class="w-full sm:w-4/5 sm:h-3/4 md:h-full rounded-3xl" src="image/kolac-krabice.jpg" alt="">
+                    <div class="flex md:absolute justify-center z-10 md:m-0 lg:mb-0 bottom-[-60px] right-[-40px]">
+                        <img class="w-full sm:w-4/5 sm:h-3/4 md:w-[280px] md:h-full rounded-3xl" src="image/kolac.jpg" alt="">
+                    </div>
                 </div>
                 <!-- CONTENT -->
                 <div class="flex flex-grow-0 flex-shrink-0 basis-[40%] flex-col items-center lg:ml-8 lg:max-w-[380px]">
-                    <p class="text-sm lg:text-base text-black text-left my-4 sm:w-3/4 lg:w-full">
-                        V naší kavárně se neustále snažíme vylepšovat sortiment dezertů a snažíme se přizpůsobovat
-                        požadavkům našich zákazníků. S příchodem každého ročního období můžete očekávat nejen sezónní
-                        kávové speciality, ale také nekávové nápoje, které obohatí naši nabídku. Přijďte a zjistěte, co
-                        jsme pro vás připravili.
+                    <p class="text-sm lg:text-base text-black text-center md:text-left my-4 sm:w-3/4 lg:w-full">
+                        U nás také najdete i široký výběr čerstvých dezertů některé i bez lepku, veganske, slaných
+                        quichů a bez konkurenčních koláčů. Vstřícný personál je vždy připraven vám pomoct s výběrem,
+                        nebo poradit s výběrem kávových specialit.
                     </p>
                 </div>
             </div>
@@ -234,28 +242,32 @@
 </div>
 
 
-<div class="menu flex container mx-auto mt-16 lg:mt-20">
+<div class="menu flex container mx-auto mt-16 lg:mt-28">
     <section class="items-center flex flex-col mx-auto w-full" id="menu">
         <div class="relative w-72 sm:w-127 md:w-137 h-12 sm:h-16 overflow-hidden">
             <div class="flex space-x-2 overflow-auto sm:overflow-hidden select-none h-full">
-                <label data-content="coffee" type="button" class="w-16 flex flex-grow items-center justify-center rounded-lg p-1 cursor-pointer">
+                <label data-content="coffee" type="button"
+                       class="w-16 flex flex-grow items-center justify-center rounded-lg p-1 cursor-pointer">
                     <input type="radio" name="radio" value="html" class="peer hidden" checked="" />
                     <span class="text-xs md:text-base font-bold p-2.5 sm:py-4 sm:p-[52px] tracking-widest peer-checked:bg-gradient-to-r peer-checked:from-gradient-red-dark peer-checked:to-gradient-red-light peer-checked:text-white text-gray-700 rounded-lg transition duration-150 ease-in-out">Káva</span>
                 </label>
-                <label data-content="hot" type="button" class="w-16 min-w-28 flex flex-grow items-center justify-center rounded-lg p-1 cursor-pointer">
-                    <input type="radio" name="radio" value="react" class="peer hidden"/>
+                <label data-content="hot" type="button"
+                       class="w-16 min-w-28 flex flex-grow items-center justify-center rounded-lg p-1 cursor-pointer">
+                    <input type="radio" name="radio" value="react" class="peer hidden" />
                     <span class="flex-none font-bold text-xs md:text-base p-2.5 sm:py-4 tracking-widest peer-checked:bg-gradient-to-r peer-checked:from-gradient-red-dark peer-checked:to-gradient-red-light peer-checked:text-white text-gray-700 rounded-lg transition duration-150 ease-in-out">Něco na zahřátí</span>
                 </label>
-                <label data-content="alternatives" type="button" class="w-16 min-w-28 flex flex-grow items-center justify-center rounded-lg p-1 cursor-pointer">
-                    <input type="radio" name="radio" value="react" class="peer hidden"/>
+                <label data-content="alternatives" type="button"
+                       class="w-16 min-w-28 flex flex-grow items-center justify-center rounded-lg p-1 cursor-pointer">
+                    <input type="radio" name="radio" value="react" class="peer hidden" />
                     <span class="flex-none font-bold text-xs md:text-base p-2.5 sm:py-4 tracking-widest peer-checked:bg-gradient-to-r peer-checked:from-gradient-red-dark peer-checked:to-gradient-red-light peer-checked:text-white text-gray-700 rounded-lg transition duration-150 ease-in-out">Alternativy</span>
                 </label>
-                <label data-content="season" type="button" class="w-16 min-w-28 flex flex-grow items-center justify-center rounded-lg p-1 cursor-pointer">
-                    <input type="radio" name="radio" value="react" class="peer hidden"/>
+                <label data-content="season" type="button"
+                       class="w-16 min-w-28 flex flex-grow items-center justify-center rounded-lg p-1 cursor-pointer">
+                    <input type="radio" name="radio" value="react" class="peer hidden" />
                     <span class="flex-none font-bold text-xs md:text-base p-2.5 sm:py-4 tracking-widest peer-checked:bg-gradient-to-r peer-checked:from-gradient-red-dark peer-checked:to-gradient-red-light peer-checked:text-white text-gray-700 rounded-lg transition duration-150 ease-in-out">Sezonní nabídka</span>
                 </label>
             </div>
-            <div class="absolute top-0 bottom-0 right-0 w-8 bg-gradient-to-l from-white pointer-events-none sm:hidden"></div>
+            <div class="absolute top-[4px] bottom-[4px] right-0 w-4 bg-gradient-to-l from-white pointer-events-none sm:hidden rounded-3xl"></div>
         </div>
         <!-- hot -->
         <div class="content w-full lg:w-3/4" id="coffee">
@@ -634,11 +646,12 @@
                 </div>
             </div>
         </div>
-        <p class="text-lg text-white my-8 text-center">Pokud Vám naše káva chutnala, budeme rádi za Vaší recenzi na Google.</p>
+        <p class="text-lg text-white my-4 lg:my-8 text-center">Pokud Vám naše káva chutnala, budeme rádi za Vaší recenzi na
+            Google.</p>
     </div>
 </section>
 
-<% if (imageData && imageData.length > 0) { %>
+<!--<% if (imageData && imageData.length > 0) { %>
     <section class="max-w-screen-xl mx-auto px-6">
         <h1 class="text-3xl font-bold mb-4">Instagram Photos</h1>
 
@@ -658,7 +671,7 @@
             <% }); %>
         </ul>
     </section>
-<% } %>
+<% } %>-->
 
 <section class="mt-16 lg:mt-20" id="kde-nas-najdete">
     <div class="max-w-7xl mx-auto md:px-4">
