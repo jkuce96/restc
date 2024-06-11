@@ -2581,6 +2581,10 @@ html {
     width: 260px;
   }
 
+  .md\:w-\[350px\] {
+    width: 350px;
+  }
+
   .md\:max-w-full {
     max-width: 100%;
   }
@@ -2701,6 +2705,10 @@ html {
 
   .lg\:w-4\/5 {
     width: 80%;
+  }
+
+  .lg\:w-\[350px\] {
+    width: 350px;
   }
 
   .lg\:max-w-\[380px\] {
