@@ -252,17 +252,17 @@
                     <span class="text-xs md:text-base font-bold p-2.5 sm:py-4 sm:p-[52px] tracking-widest peer-checked:bg-gradient-to-r peer-checked:from-gradient-red-dark peer-checked:to-gradient-red-light peer-checked:text-white text-gray-700 rounded-lg transition duration-150 ease-in-out">Káva</span>
                 </label>
                 <label data-content="hot" type="button"
-                       class="w-16 min-w-28 flex flex-grow items-center justify-center rounded-lg p-1 cursor-pointer">
+                       class="w-16 min-w-32 flex flex-grow items-center justify-center rounded-lg p-1 cursor-pointer">
                     <input type="radio" name="radio" value="react" class="peer hidden" />
                     <span class="flex-none font-bold text-xs md:text-base p-2.5 sm:py-4 tracking-widest peer-checked:bg-gradient-to-r peer-checked:from-gradient-red-dark peer-checked:to-gradient-red-light peer-checked:text-white text-gray-700 rounded-lg transition duration-150 ease-in-out">Něco na zahřátí</span>
                 </label>
                 <label data-content="season" type="button"
-                       class="w-16 min-w-28 flex flex-grow items-center justify-center rounded-lg p-1 cursor-pointer">
+                       class="w-16 min-w-32 flex flex-grow items-center justify-center rounded-lg p-1 cursor-pointer">
                     <input type="radio" name="radio" value="react" class="peer hidden" />
-                    <span class="flex-none font-bold text-xs md:text-base p-2.5 sm:py-4 tracking-widest peer-checked:bg-gradient-to-r peer-checked:from-gradient-red-dark peer-checked:to-gradient-red-light peer-checked:text-white text-gray-700 rounded-lg transition duration-150 ease-in-out">Letní nabídka</span>
+                    <span class="flex-none font-bold text-xs md:text-base p-2.5 sm:py-4 tracking-widest peer-checked:bg-gradient-to-r peer-checked:from-gradient-red-dark peer-checked:to-gradient-red-light peer-checked:text-white text-gray-700 rounded-lg transition duration-150 ease-in-out">Podzimní nabídka</span>
                 </label>
                 <label data-content="alternatives" type="button"
-                       class="w-16 min-w-28 flex flex-grow items-center justify-center rounded-lg p-1 cursor-pointer">
+                       class="w-16 min-w-32 flex flex-grow items-center justify-center rounded-lg p-1 cursor-pointer">
                     <input type="radio" name="radio" value="react" class="peer hidden" />
                     <span class="flex-none font-bold text-xs md:text-base p-2.5 sm:py-4 tracking-widest peer-checked:bg-gradient-to-r peer-checked:from-gradient-red-dark peer-checked:to-gradient-red-light peer-checked:text-white text-gray-700 rounded-lg transition duration-150 ease-in-out">Alternativy</span>
                 </label>
@@ -359,6 +359,12 @@
                             <span>110/119 Kč</span>
                         </li>
                         <li class="flex justify-between items-center py-2 flex-row pointer-events-none">
+                           <span class="flex">Perníkové Latte 300/400 ml</span>
+                           <span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
+
+                           <span>115/125 Kč</span>
+                       </li>
+                        <li class="flex justify-between items-center py-2 flex-row pointer-events-none">
                             <span class="flex">Matcha Latte 300/400 ml</span>
                             <span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
 
@@ -385,7 +391,7 @@
             <div class="rounded-lg overflow-hidden w-full">
                 <div class="px-2 py-4">
                     <ul class="text-black">
-                        <li class="flex justify-between items-center py-2 flex-row pointer-events-none">
+                        <!--<li class="flex justify-between items-center py-2 flex-row pointer-events-none">
                             <span class="flex">Coco matcha</span>
                             <span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
 
@@ -420,20 +426,8 @@
                             <span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
 
                             <span>110 Kč</span>
-                        </li>
-                        <!--<li class="flex justify-between items-center py-2 flex-row pointer-events-none">
-                            <span class="flex">Pumpkin spice</span>
-                            <span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
-
-                            <span>115/125 Kč</span>
-                        </li>
-                        <li class="flex justify-between items-center py-2 flex-row pointer-events-none">
-                            <span class="flex">Perníkové Latte</span>
-                            <span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
-
-                            <span>115/125 Kč</span>
                         </li>-->
-                        <li class="flex justify-between items-center py-2 flex-row pointer-events-none">
+                        <!--<li class="flex justify-between items-center py-2 flex-row pointer-events-none">
                             <span class="flex">Víno</span>
                             <span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
 
@@ -444,13 +438,70 @@
                             <span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
 
                             <span>69 Kč</span>
-                        </li>
+                        </li>-->
                         <!--<li class="flex justify-between items-center py-2 flex-row pointer-events-none">
                             <span class="flex">Ledový čaj</span>
                             <span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
 
                             <span>69 Kč</span>
                         </li>-->
+                        <li class="flex justify-between items-center py-2 flex-row pointer-events-none">
+                            <span class="flex">Pumpkin spice</span>
+                            <span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
+
+                            <span>115/125 Kč</span>
+                        </li>
+                        <li class="flex justify-between items-center py-2 flex-row pointer-events-none">
+                            <div class="flex items-center gap-2 flex-shrink-0">
+                                <div class="flex flex-col leading-tight">
+                                    <span class="font-medium">Pumpkin cream ICE Latte</span>
+                                    <span class="text-xs italic absolute top-[80%] left-[15px] mt-0.5">(double espresso, mléko, příchuť, vyšlehaná smetana)</span>
+                                </div>
+                            </div>
+                            <span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
+
+                            <span>129 Kč</span>
+                        </li>
+                        <li class="flex justify-between items-center pt-4 pb-2 flex-row pointer-events-none">
+                            <span class="flex">Hot chocolate</span>
+                            <span class="flex-grow border-b-2 border-dotted border-gray-400 mx-2"></span>
+
+                            <span class="font-medium">89 Kč</span>
+                        </li>
+                        <li class="flex justify-between items-center py-2 flex-row pointer-events-none">
+                            <div class="flex items-center gap-2 flex-shrink-0">
+                                <div class="flex flex-col leading-tight">
+                                    <span class="font-medium">Hot Apple Juice</span>
+                                    <span class="text-xs italic absolute top-[80%] left-[15px] mt-0.5">(horký jablečný mošt se skořicí)</span>
+                                </div>
+                            </div>
+                            <span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
+
+                            <span>79 Kč</span>
+                        </li>
+                        <li class="flex justify-between items-center pt-4 pb-2 flex-row pointer-events-none">
+                            <div class="flex items-center gap-2 flex-shrink-0">
+                                <div class="flex flex-col leading-tight">
+                                    <span class="font-medium">Dirty chai latte</span>
+                                    <span class="text-xs italic absolute top-[80%] left-[15px] mt-0.5">(Chai latte s shotem espresa)</span>
+                                </div>
+                            </div>
+                            <span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
+
+                            <span>115 Kč</span>
+                        </li>
+                        <li class="flex justify-between items-center pt-4 pb-2 flex-row pointer-events-none">
+                            <span class="flex">Pumpkin Matcha latte</span>
+                            <span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
+
+                            <span>125 Kč</span>
+                        </li>
+                        <li class="flex justify-between items-center py-2 flex-row pointer-events-none">
+                            <span class="flex">White chocolate matcha</span>
+                            <span class="flex-grow border-b-2 border-dotted rounded-none border-gray-400"></span>
+
+                            <span>129 Kč</span>
+                        </li>
                     </ul>
                 </div>
             </div>
